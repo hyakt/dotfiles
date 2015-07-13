@@ -1,0 +1,2 @@
+#bashのTab補完で大文字・小文字を無視
+set completion-ignore-case on
