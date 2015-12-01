@@ -94,3 +94,10 @@ extract () {
  if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
  fi
+
+ if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
+     shopt -s autocd
+     shopt -s cdspell
+     shopt -s dotglob
+     shopt -s globstar
+ fi

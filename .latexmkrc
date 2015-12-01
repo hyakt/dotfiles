@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
-$latex            = 'uplatex -synctex=1';
-$latex_silent     = 'uplatex -synctex=1 -interaction=batchmode';
-$bibtex           = 'upbibtex';
+$latex            = 'platex -synctex=1';
+$latex_silent     = 'platex -synctex=1 -interaction=batchmode';
+$bibtex           = 'pbibtex';
 $dvipdf           = 'dvipdfmx %O -o %D %S';
 $makeindex        = 'mendex %O -o %D %S';
 $max_repeat       = 5;
