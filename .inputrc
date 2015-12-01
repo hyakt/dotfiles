@@ -1,2 +1,3 @@
-#bashのTab補完で大文字・小文字を無視
+$if Bash
 set completion-ignore-case on
+$endif
