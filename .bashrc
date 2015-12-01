@@ -11,13 +11,13 @@ export PATH
 set_prompt () {
     Last_Command=$? # Must come first!
     # Regular Colors
-    Cyan='\e[0;36m'         # Cyan
-    White='\e[0;37m'        # White
+    Cyan='\[\e[0;36m\]'         # Cyan
+    White='\[\e[0;37m\]'        # White
 
     # Bold
-    BRed='\e[1;31m'         # Red
-    BYellow='\e[1;33m'      # Yellow
-    BPurple='\e[1;35m'      # Purple
+    BRed='\[\e[1;31m\]'         # Red
+    BYellow='\[\e[1;33m\]'      # Yellow
+    BPurple='\[\e[1;35m\]'      # Purple
     Reset='\[\e[00m\]'
 
     # Add a bright white exit status for the last command
