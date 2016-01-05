@@ -56,11 +56,6 @@ export EDITOR=ja_JP.UTF-8
 alias emacs='emacs -q -nw'
 alias e='emacsclient'
 
-#ls
-alias ls='ls -hGF'
-alias la='ls -aGhF'
-alias ll='ls -lGhF'
-
 #extract:解凍
 extract () {
     if [ -f $1 ] ; then
@@ -83,8 +78,19 @@ extract () {
      fi
 }
 
- # 保管
+if [ "$(uname)" == 'Darwin' ]; then
+    #ls
+    alias ls='ls -hGF'
+    alias la='ls -aGhF'
+    alias ll='ls -lGhF'
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+    alias ls='ls -F --color'
+    alias la='ls -Fa --color'
+    alias ll='ls -Fl --color'
+    alias l='ls -Fla --color'
+fi
 
+ # 保管
 if [ "$(uname)" == 'Darwin' ]; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
 	. $(brew --prefix)/etc/bash_completion
