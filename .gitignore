@@ -1,2 +1,4 @@
 .zshenv
+.bash_profile
 .config/fish/fish_history
+
