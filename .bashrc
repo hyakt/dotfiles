@@ -1,11 +1,4 @@
 #------------
-#PATH setting
-#------------
-
-PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
-export PATH
-
-#------------
 #Prompt
 #------------
 set_prompt () {
