@@ -45,8 +45,8 @@ PROMPT_COMMAND='set_prompt'
 #Editor
 #-----------
 
-export EDITOR='emacs -q -nw'
-export EDITOR=ja_JP.UTF-8
+export EDITOR='vim'
+export SVN_EDITOR='vim'
 
 #-----------
 #alias
