@@ -13,18 +13,28 @@ set_prompt () {
     BPurple='\[\e[1;35m\]'      # Purple
     Reset='\[\e[00m\]'
 
+    # プロンプトにgit各種情報を表示しない
+    GIT_PS1_SHOWDIRTYSTATE=
+    GIT_PS1_SHOWUPSTREAM=
+    GIT_PS1_SHOWUNTRACKEDFILES=
+    GIT_PS1_SHOWSTASHSTATE=
+
     # Add a bright white exit status for the last command
     PS1=""
 
     # If root, just print the host in red. Otherwise, print the current user
     # and host in green.
     if [[ $EUID == 0 ]]; then
-        PS1+="$BRed\\h "
+        # PS1+="$BRed\\h "
+        PS1+="$BRed"
     else
-        PS1+="$BPurple\\h "
+        # PS1+="$BPurple\\h "
+        PS1+="$BPurple"
     fi
 
-    PS1+="$Cyan\\w "
+    PS1+="\\w"
+
+    PS1+="${Cyan}$(__git_ps1) "
 
     # If it was successful, print a green check mark. Otherwise, print
     # a red X.
