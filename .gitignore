@@ -1,4 +1,9 @@
 .zshenv
 .bash_profile
 .config/fish/fish_history
-
+.meghanada
+GPATH
+GRTAGS
+GTAGS
+.idea
+*.iml
