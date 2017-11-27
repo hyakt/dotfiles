@@ -1,62 +1,59 @@
 [user]
 	name = Hayato Kajiyama
-	mail = kaji1216@gmail.com
-	email = kaji1216@gmail.com
 [color]
-	# color¤ÎÀßÄê(°Ê²¼¤Î¥³¥Ş¥ó¥É¤Ï¼«Æ°¤Ç¿§¤Ä¤±¤ë)
 	status = auto
 	diff = auto
 	branch = auto
 	interactive = auto
 	grep = auto
 [push]
-	default = tracking       # default¤ÎpushÀè¤Ïtracking¤·¤Æ¤¤¤ë¥ê¥İ¥¸¥È¥ê
+	default = tracking       # defaultã®pushå…ˆã¯trackingã—ã¦ã„ã‚‹ãƒªãƒã‚¸ãƒˆãƒª
 [core]
-	excludesfile = ~/.gitignore  # global¤Ê.gitignore¤Î»ØÄê
-	autocrlf = input                 # CRLF¤ò¼«Æ°ÊÑ´¹
-	editor = emacs -nw -q
+	excludesfile = ~/.gitignore  # globalãª.gitignoreã®æŒ‡å®š
+	autocrlf = input                 # CRLFã‚’è‡ªå‹•å¤‰æ›
+	editor = vim 
 [alias]
 	st = status
 	sh = show
 	so = remote show origin
 	ft = fetch
 	up = pull --rebase       # pull rebase
-	rbm = rebase master      # master¤Ø¤Îrebase¤Ï¤è¤¯»È¤¦¤Î¤Çalias
+	rbm = rebase master      # masterã¸ã®rebaseã¯ã‚ˆãä½¿ã†ã®ã§alias
 	ad = add
-	ci = commit -a           # modified¤Ê¥Õ¥¡¥¤¥ë¤òÁ´¤Æstage¤Ø
-	cam = commit -a --amend  # Ä¾Á°¤Îcommit¤ò½¤Àµ
+	ci = commit -a           # modifiedãªãƒ•ã‚¡ã‚¤ãƒ«ã‚’å…¨ã¦stageã¸
+	cam = commit -a --amend  # ç›´å‰ã®commitã‚’ä¿®æ­£
 	co = checkout
-	# branch´ØÏ¢
+	# branché–¢é€£
 	br = branch
-	ba = branch -a           # origin¤â´Ş¤á¤¿Á´¤Æ¤Îbranch¤òÉ½¼¨
-	bm = branch --merged     # mergeºÑ¤ß¤Îbranch¤òÉ½¼¨
-	bn = branch --no-merged  # merge¤·¤Æ¤Ê¤¤branch¤òÉ½¼¨
-	# log´ØÏ¢
-	wc = whatchanged         # log¤ËÊÑ¹¹¤µ¤ì¤¿¥Õ¥¡¥¤¥ë¤â°ì½ï¤Ë½Ğ¤¹
-	ls = log --stat          # log¤ËÊÑ¹¹¤µ¤ì¤¿¥Õ¥¡¥¤¥ë¤â°ì½ï¤Ë½Ğ¤¹
-	lp = log -p              # diff¤â°ì½ï¤Ë½Ğ¤¹
-	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short  # ¤¶¤Ã¤¯¤ê¥í¥°½Ğ¤¹
-	lr = log origin          # origin¤Îlog
+	ba = branch -a           # originã‚‚å«ã‚ãŸå…¨ã¦ã®branchã‚’è¡¨ç¤º
+	bm = branch --merged     # mergeæ¸ˆã¿ã®branchã‚’è¡¨ç¤º
+	bn = branch --no-merged  # mergeã—ã¦ãªã„branchã‚’è¡¨ç¤º
+	# logé–¢é€£
+	wc = whatchanged         # logã«å¤‰æ›´ã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚‚ä¸€ç·’ã«å‡ºã™
+	ls = log --stat          # logã«å¤‰æ›´ã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚‚ä¸€ç·’ã«å‡ºã™
+	lp = log -p              # diffã‚‚ä¸€ç·’ã«å‡ºã™
+	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short  # ã–ã£ãã‚Šãƒ­ã‚°å‡ºã™
+	lr = log origin          # originã®log
 	oneline = log --pretty=oneline
 	ranking = shortlog -s -n --no-merges
-	# log¤òtreeÉ½¼¨
+	# logã‚’treeè¡¨ç¤º
 	log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
 	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
-	# diff´ØÏ¢
-	dm = diff master           # master¤È¤Îdiff
-	dw = diff --color-words    # Ã±¸ìÃ±°Ì¤Ç¤¤¤í¤Ä¤±¤Ædiff
-	dc = diff --cached         # add¤µ¤ì¤Æ¤¤¤ë¤â¤Î¤È¤Îdiff
-	ds = diff --staged         # Æ±¾å(1.6.1°Ü¹Ô)
-	d1 = diff HEAD~            # HEAD¤«¤é1¤ÄÁ°¤Èdiff
-	d2 = diff HEAD~~           # HEAD¤«¤é2¤ÄÁ°¤Èdiff
-	d3 = diff HEAD~~~          # HEAD¤«¤é3¤ÄÁ°¤Èdiff
-	d4 = diff HEAD~~~~         # HEAD¤«¤é4¤ÄÁ°¤Èdiff
-	d5 = diff HEAD~~~~~        # HEAD¤«¤é5¤ÄÁ°¤Èdiff
-	d10 = diff HEAD~~~~~~~~~~  # HEAD¤«¤é10Á°¤Èdiff
-	# merge¤Îºİ¤Ëconflict¤¬µ¯¤­¤¿¥Õ¥¡¥¤¥ë¤òÊÔ½¸
+	# diffé–¢é€£
+	dm = diff master           # masterã¨ã®diff
+	dw = diff --color-words    # å˜èªå˜ä½ã§ã„ã‚ã¤ã‘ã¦diff
+	dc = diff --cached         # addã•ã‚Œã¦ã„ã‚‹ã‚‚ã®ã¨ã®diff
+	ds = diff --staged         # åŒä¸Š(1.6.1ç§»è¡Œ)
+	d1 = diff HEAD~            # HEADã‹ã‚‰1ã¤å‰ã¨diff
+	d2 = diff HEAD~~           # HEADã‹ã‚‰2ã¤å‰ã¨diff
+	d3 = diff HEAD~~~          # HEADã‹ã‚‰3ã¤å‰ã¨diff
+	d4 = diff HEAD~~~~         # HEADã‹ã‚‰4ã¤å‰ã¨diff
+	d5 = diff HEAD~~~~~        # HEADã‹ã‚‰5ã¤å‰ã¨diff
+	d10 = diff HEAD~~~~~~~~~~  # HEADã‹ã‚‰10å‰ã¨diff
+	# mergeã®éš›ã«conflictãŒèµ·ããŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç·¨é›†
 	edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
-	# merge¤Îºİ¤Ëconflict¤¬µ¯¤­¤¿¥Õ¥¡¥¤¥ë¤òadd
+	# mergeã®éš›ã«conflictãŒèµ·ããŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’add
 	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-	# grep´ØÏ¢
+	# grepé–¢é€£
 	gr = grep
 	gn = grep -n
