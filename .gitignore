@@ -28,9 +28,14 @@ Temporary Items
 
 # User Added
 .zshenv
+.config/configstore/
+.config/karabiner/
+.config/fish/completions/
+.config/fisherman/
 .config/fish/fish_history
 .config/fish/fishd*
 .config/fish/functions/
+.config/fish/conf.d/
 .meghanada
 GPATH
 GRTAGS
