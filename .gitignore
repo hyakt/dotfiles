@@ -30,6 +30,7 @@ Temporary Items
 .zshenv
 .config/fish/fish_history
 .config/fish/fishd*
+.config/fish/functions/
 .meghanada
 GPATH
 GRTAGS
