@@ -36,6 +36,7 @@ Temporary Items
 .config/fish/fishd*
 .config/fish/functions/
 .config/fish/conf.d/
+.config/gcloud/
 .meghanada
 GPATH
 GRTAGS
@@ -44,3 +45,4 @@ GTAGS
 *.iml
 .tern-port
 
+.config/gcloud/
