@@ -7,11 +7,12 @@
 	interactive = auto
 	grep = auto
 [push]
-	default = tracking       # defaultのpush先はtrackingしているリポジトリ
+	default = tracking           # defaultのpush先はtrackingしているリポジトリ
 [core]
 	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
-	autocrlf = input                 # CRLFを自動変換
-	editor = vim 
+	autocrlf = input             # CRLFを自動変換
+	editor = vim
+	quotepath = false
 [alias]
 	st = status
 	sh = show
@@ -57,3 +58,6 @@
 	# grep関連
 	gr = grep
 	gn = grep -n
+	# clone
+	clone = clone --recursive
+	cl = clone --recursive
