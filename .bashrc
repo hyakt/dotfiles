@@ -116,5 +116,8 @@ fi
  alias emacs='emacs -q -nw'
  alias e='emacsclient'
 
- #docker
+ # git
+ alias g='git'
+ 
+ # docker
  alias d='docker'
