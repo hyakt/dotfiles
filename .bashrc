@@ -32,9 +32,7 @@ set_prompt () {
         PS1+="$BPurple"
     fi
 
-    PS1+="\\w"
-
-    PS1+="${Cyan}$(__git_ps1) "
+    PS1+="\\w "
 
     # If it was successful, print a green check mark. Otherwise, print
     # a red X.
@@ -61,10 +59,6 @@ export SVN_EDITOR='vim'
 #-----------
 #alias
 #-----------
-
-#emacs
-alias emacs='emacs -q -nw'
-alias e='emacsclient'
 
 #extract:解凍
 extract () {
@@ -117,3 +111,10 @@ fi
      shopt -s dotglob
      shopt -s globstar
  fi
+
+ #emacs
+ alias emacs='emacs -q -nw'
+ alias e='emacsclient'
+
+ #docker
+ alias d='docker'
