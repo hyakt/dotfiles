@@ -2,7 +2,8 @@
 #------------------
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
-
+set -g fish_user_paths /usr/local/lib/ruby/gems/2.6.0/bin $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # key bindings
 #-----------
@@ -14,7 +15,6 @@ end
 #-----------
 export EDITOR='vim'
 export SVN_EDITOR='vim'
-
 
 # alias
 #-----------
@@ -33,5 +33,3 @@ balias gdown 'gcloud compute instances stop'
 ## docker
 balias d 'docker'
 balias dc 'docker container'
-
-
