@@ -9,12 +9,12 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 11,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Source Han Code JP", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
-    // default font weight: 'normal' or 'bold'
+      // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
 
     // font weight for bold characters: 'normal' or 'bold'
@@ -138,13 +138,13 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-dracula",
     "hyper-statusline",
     "hyper-tab-icons-plus",
     "hyperlinks",
     "hypercwd",
     "hyper-search",
-    "hyper-broadcast"
+    "hyper-broadcast",
+    "hyper-seti"
   ],
 
   // in development, you can create a directory under
