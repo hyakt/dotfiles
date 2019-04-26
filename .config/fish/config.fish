@@ -21,7 +21,10 @@ export SVN_EDITOR='vim'
 ## misc
 balias g git
 balias e emacsclient
-balias l exa
+if which exa > /dev/null 2>&1;
+   balias ls 'exa'
+   balias l exa
+end
 
 ## gcloud
 balias gcp 'gcloud compute copy-files'
