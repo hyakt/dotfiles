@@ -44,3 +44,4 @@ GTAGS
 .idea
 *.iml
 .tern-port
+.config/htop/
