@@ -11,6 +11,9 @@ set GHQ_SELECTOR peco
 #-----------
 function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
+  bind \cx\ck peco_kill
+  bind \cx\cr peco_recentd
+  bind \cx\cf '__fzf_find_file'
 end
 
 # editor
