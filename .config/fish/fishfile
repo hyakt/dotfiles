@@ -2,6 +2,7 @@ oh-my-fish/plugin-balias
 edc/bass
 0rax/fish-bd
 fisherman/getopts
+decors/fish-ghq
 fisherman/git_util
 fisherman/host_info
 fisherman/humanize_duration
