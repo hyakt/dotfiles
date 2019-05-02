@@ -1,6 +1,5 @@
 [user]
-	name = hyakt
-	email = hyakt0@gmail.com
+	name = Hayato KAJIYAMA
 [color]
 	status = auto
 	diff = auto
@@ -62,3 +61,5 @@
 	# clone
 	clone = clone --recursive
 	cl = clone --recursive
+[ghq]
+	root = ~/git
