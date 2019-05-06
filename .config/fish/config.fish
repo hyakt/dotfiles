@@ -30,6 +30,7 @@ if which exa > /dev/null 2>&1;
    balias ls 'exa'
    balias l exa
 end
+balias gh 'hub browse (ghq list | peco | cut -d "/" -f 2,3)'
 
 ## gcloud
 balias gcp 'gcloud compute copy-files'
