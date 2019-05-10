@@ -47,3 +47,4 @@ GTAGS
 .tern-port
 .config/htop/
 .config/yarn/
+.config/hub
