@@ -153,6 +153,7 @@ module.exports = {
     "hypercwd",
     "hyper-search",
     "hyper-broadcast",
+    "hyperterm-tabs",
     "hyper-seti"
   ],
 
