@@ -12,6 +12,6 @@ dotfilesの整理
 * sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
 * chsh -s /usr/local/bin/fish
 * fish
-* curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman
-  *(https://github.com/fisherman/fisherman/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E)*
+* curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+  *(https://github.com/jorgebucaran/fisher)*
 * fisher
