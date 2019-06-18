@@ -1,0 +1,15 @@
+{
+  "plugins": {
+    "es_modules": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    }
+  },
+  "libs": [
+    "browser",
+    "react",
+    "underscore",
+    "ecmascript"
+  ]
+}
