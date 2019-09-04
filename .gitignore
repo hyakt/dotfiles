@@ -49,3 +49,4 @@ GTAGS
 .config/yarn/
 .config/hub
 .config/gatsby/
+.config/anyenv/

@@ -3,6 +3,8 @@
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "$HOME/git/github.com/flutter/flutter/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/.pub-cache/bin" $fish_user_paths
+set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
+anyenv init - | source
 
 set GHQ_SELECTOR peco
 
