@@ -49,3 +49,6 @@ balias dc 'docker container'
 
 ## yarn
 balias y 'yarn'
+
+## rails
+balias r rails
