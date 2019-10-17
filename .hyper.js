@@ -154,7 +154,7 @@ module.exports = {
     "hyper-search",
     "hyper-broadcast",
     "hyperterm-tabs",
-    "hyper-seti"
+    "hyperwave"
   ],
 
   // in development, you can create a directory under
