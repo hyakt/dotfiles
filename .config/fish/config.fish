@@ -9,6 +9,10 @@ if which anyenv > /dev/null 2>&1;
     anyenv init - | source
 end
 
+if which direnv > /dev/null 2>&1;
+    direnv hook fish | source
+end
+
 set GHQ_SELECTOR peco
 
 # key bindings

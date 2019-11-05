@@ -50,3 +50,4 @@ GTAGS
 .config/hub
 .config/gatsby/
 .config/anyenv/
+.config/direnv/
