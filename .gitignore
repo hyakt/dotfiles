@@ -51,3 +51,5 @@ GTAGS
 .config/gatsby/
 .config/anyenv/
 .config/direnv/
+# for tssever
+.log/
