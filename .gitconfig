@@ -63,4 +63,4 @@
 	clone = clone --recursive
 	cl = clone --recursive
 [ghq]
-	root = ~/git
+	root = ~/repos
