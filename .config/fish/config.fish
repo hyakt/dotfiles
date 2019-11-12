@@ -51,6 +51,9 @@ balias gdown 'gcloud compute instances stop'
 balias d 'docker'
 balias dc 'docker container'
 
+## npm
+balias n 'npm'
+
 ## yarn
 balias y 'yarn'
 
