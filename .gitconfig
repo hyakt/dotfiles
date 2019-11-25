@@ -62,5 +62,7 @@
 	# clone
 	clone = clone --recursive
 	cl = clone --recursive
+[rebase]
+	autostash = true
 [ghq]
 	root = ~/repos
