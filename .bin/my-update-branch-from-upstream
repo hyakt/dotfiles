@@ -1,0 +1,26 @@
+#!/usr/local/bin/fish
+
+function main
+    set CMDNAME (basename (status -f))
+
+    if test (count $argv) -ne 1
+        echo "usage: $CMDNAME branchname"
+        return 1
+    end
+
+    echo "--- start 🐖💨 ---"
+
+    set current_branch (git branch --show-current)
+    set update_branch $argv
+
+    git checkout $update_branch 2>/dev/null || git checkout -b $update_branch;
+    git fetch upstream $update_branch;
+    git merge upstream/$update_branch;
+    git push --no-verify origin $update_branch;
+    git checkout $current_branch;
+
+    echo "--- end 🐖👋 ---"
+end
+
+main $argv
+

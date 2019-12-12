@@ -1,0 +1,4 @@
+#!/usr/local/bin/fish
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/$argv.fish > ~/.config/fish/completions/$argv.fish
+
+
