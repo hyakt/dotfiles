@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+cd ~/repos/github.com/hyakt/ca_web
+direnv reload
+redis-server &
+bundle install
+rm -rf ./node_modules
+npm install
+npm run build
+bundle exec rake db:migrate
+env RAILS_ENV=test bundle exec rake db:migrate
+bin/fast_seed
+env RAILS_ENV=test bin/fast_seed
+pkill ruby
+bin/rails s -p $CA_PORT -b 127.0.0.1
