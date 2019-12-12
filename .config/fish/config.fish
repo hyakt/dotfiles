@@ -1,9 +1,12 @@
 # general settings
 #------------------
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
+# flutter
 set -g fish_user_paths "$HOME/git/github.com/flutter/flutter/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/.pub-cache/bin" $fish_user_paths
-set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
+# my shell
+set -g fish_user_paths "$HOME/.bin/" $fish_user_paths
 
 if which anyenv > /dev/null 2>&1;
     anyenv init - | source
