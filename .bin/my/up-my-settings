@@ -1,0 +1,22 @@
+#!/usr/local/bin/fish
+
+function main
+    set CMDNAME (basename (status -f))
+
+    if test (count $argv) -ne 0
+        echo "usage: $CMDNAME"
+        return 1
+    end
+
+    set SETTING_REPOS hyakt/.emacs.d hyakt/dotfiles
+
+    echo "=== start 🐖💨 ==="
+
+    for repo in $SETTING_REPOS
+        ghq get -u $repo
+    end
+
+    echo "=== end 🐖👋 ==="
+end
+
+main $argv
