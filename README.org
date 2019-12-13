@@ -1,0 +1,32 @@
+* dotfiles
+  [[https://github.com/hyakt/.emacs.d][.emacs.d]]は別repoで管理
+
+** Let's start 🐖💨
+   下記をターミナルで実行
+   #+BEGIN_SRC sh
+   ## create symlink
+   chmod +x ./symlink.sh
+   bash ./symlink.sh
+
+   ## fish
+   brew install fish
+   sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
+   chsh -s /usr/local/bin/fish
+   fish
+   curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+   *(https://github.com/jorgebucaran/fisher)*
+   fisher
+   #+END_SRC
+
+** File and directory 📚
+   - .aspell.conf  : スペルチェッカの設定 (brew install aspell)
+   - .bash_profile : bashのパスなどの設定 (設定は.bashrcへ)
+   - .bashrc       : bashの設定
+   - .bin          : 自分用ユーティリティシェルの設定
+   - .config       : [[https://github.com/fish-shell/fish-shell][fish]]などの設定はこちら
+   - .gitconfig    : 共通のGitの設定 ($HOMEにこれをincludeするリンクが貼られる)
+   - .gitignore    : 共通の.gitignoreの設定
+   - .hyper.js     : [[https://hyper.is/][Hyper]] の設定 (brew cask install hyper)
+   - .inputrc      : キーボードマップの設定 (Bashなどのシェルから呼び出されます)
+   - .latexmkrc    : LaTeXのmakeファイル設定
+   - .tmux.conf    : [[https://github.com/tmux/tmux][tmux]]の設定
