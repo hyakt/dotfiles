@@ -5,13 +5,13 @@
   - Bash用PATH: 未設定
 
 ** How To Use 💁‍♀️
-   =my/= のプレフィクスをつけて実行
+   =my:= のプレフィクスをつけて実行
 
    #+NAME: example
    #+BEGIN_SRC sh
    # 例)
-   my/helloworld
+   my:helloworld
    #+END_SRC
 
 ** Rules 👮🏻‍♂️
-   - 作成したシェルは =my/= のプレフィクスつけるため =my/= ディレクトリ以下に配置する
+   - 作成したシェルは =my:= のプレフィクスつける
