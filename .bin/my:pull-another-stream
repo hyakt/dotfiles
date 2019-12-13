@@ -1,0 +1,18 @@
+#!/usr/local/bin/fish
+# PRがあった時に確認のためローカルにPullするShell
+
+function main --argument username branchname
+    set reponame (basename (git rev-parse --show-toplevel))
+
+    echo "--- start 🐖💨 ---"
+    git checkout -b "$username"-"$branchname"
+    git pull https://github.com/"$username"/"$reponame".git "$branchname"
+    echo "--- end 🐖👋 ---"
+end
+
+if test (count $argv) -ne 2
+    echo "usage: $CMDNAME username branchname"
+    exit 1
+end
+
+main $argv
