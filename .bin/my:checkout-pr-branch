@@ -1,0 +1,17 @@
+#!/usr/local/bin/fish
+# PRがあった時に確認のためローカルにPullするShell
+
+function main --argument pr_id
+    echo "--- start 🐖💨 ---"
+    git checkout $default_branch
+    git fetch upstream "pull/$pr_id/head:pr/$pr_id"
+    git checkout "pr/$pr_id"
+    echo "--- end 🐖👋 ---"
+end
+
+if test (count $argv) -ne 1
+    echo "usage: $CMDNAME pr_id"
+    exit 1
+end
+
+main $argv

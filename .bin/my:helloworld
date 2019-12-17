@@ -1,3 +1,10 @@
-#!/bin/sh
+#!/usr/local/bin/fish
 
 echo "hello world!"
+
+# repositoryの名前を取得
+set reponame (basename (git rev-parse --show-toplevel))
+# upstream のurlを取得
+set upstream_url (git remote get-url upstream)
+# defaultブランチを取得
+set default_branch (git ls-remote --symref $remote_url HEAD | head -1 | sed -e "s/ref: refs\/heads\/\([a-z]*\).*/\1/g")
