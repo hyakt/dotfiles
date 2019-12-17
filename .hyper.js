@@ -147,7 +147,6 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyperline",
     "hyper-tab-icons-plus",
     "hyperlinks",
     "hypercwd",
