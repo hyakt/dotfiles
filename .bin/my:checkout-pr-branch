@@ -3,9 +3,10 @@
 
 function main --argument pr_id
     echo "--- start 🐖💨 ---"
-    git checkout $default_branch
-    git fetch upstream "pull/$pr_id/head:pr/$pr_id"
-    git checkout "pr/$pr_id"
+    hub pr checkout $pr_id
+    # git checkout $default_branch
+    # git fetch upstream "pull/$pr_id/head:pr/$pr_id"
+    # git checkout "pr/$pr_id"
     echo "--- end 🐖👋 ---"
 end
 
