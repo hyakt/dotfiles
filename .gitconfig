@@ -65,3 +65,5 @@
 	gn = grep -n
 	# clone
 	clone = clone --recursive
+	# reset
+	rhh = reset --hard HEAD
