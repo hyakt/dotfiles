@@ -57,3 +57,5 @@
 	clone = clone --recursive
 	# reset
 	rhh = reset --hard HEAD
+	# backup
+	bk = !git branch backup/`git rev-parse --abbrev-ref HEAD`_`date \"+%Y%m%d%H%M\"`
