@@ -1,0 +1,16 @@
+#!/usr/local/bin/fish
+
+function main
+    set CMDNAME (basename (status -f))
+
+    if test (count $argv) -ne 0
+        echo "usage: $CMDNAME"
+        return 1
+    end
+
+    echo "--- start 🐖💨 ---"
+    git branch -D (git branch --format="%(refname:short)" | grep "^pr/")
+    echo "--- end 🐖👋 ---"
+end
+
+main $argv
