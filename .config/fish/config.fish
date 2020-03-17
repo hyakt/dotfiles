@@ -7,6 +7,12 @@ set -g fish_user_paths "$HOME/git/github.com/flutter/flutter/bin" $fish_user_pat
 set -g fish_user_paths "$HOME/.pub-cache/bin" $fish_user_paths
 # my shell
 set -g fish_user_paths "$HOME/.bin/" $fish_user_paths
+# go
+set -x GOENV_ROOT $HOME/.goenv
+set -g fish_user_paths "$GOENV_ROOT/bin" $fish_user_paths
+set -x GOENV_DISABLE_GOPATH 1
+set -g GOPATH "$HOME/go"
+set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 
 if which anyenv > /dev/null 2>&1;
     anyenv init - | source
