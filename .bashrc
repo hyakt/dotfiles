@@ -1,6 +1,34 @@
-#------------
-#Prompt
-#------------
+# PATH
+# マシン個別PATHの設定は.bash_profileに記載する
+#----------
+# sbin
+PATH="$PATH:/usr/local/sbin"
+# my shell
+PAHT="$PATH:$HOME/.bin/"
+# anyenv
+PATH="$HOME/.anyenv/bin:$PATH"
+
+# Env
+#----------
+if type anyenv > /dev/null 2>&1; then
+    eval "$(anyenv init -)"
+fi
+if type direnv > /dev/null 2>&1; then
+    eval "$(direnv hook bash)"
+fi
+
+# golang
+PATH="$PATH:$GOENV_ROOT/bin:$GOPATH/bin"
+
+export PATH
+
+# Editor
+#----------
+export EDITOR='vim'
+export SVN_EDITOR='vim'
+
+# Prompt
+#----------
 set_prompt () {
     Last_Command=$? # Must come first!
     # Regular Colors
@@ -49,39 +77,8 @@ set_prompt () {
 
 PROMPT_COMMAND='set_prompt'
 
-#-----------
-#Editor
-#-----------
-
-export EDITOR='vim'
-export SVN_EDITOR='vim'
-
-#-----------
-#alias
-#-----------
-
-#extract:解凍
-extract () {
-    if [ -f $1 ] ; then
-      case $1 in
-        *.tar.bz2)   tar xjf $1     ;;
-        *.tar.gz)    tar xzf $1     ;;
-        *.bz2)       bunzip2 $1     ;;
-        *.rar)       unrar e $1     ;;
-        *.gz)        gunzip $1      ;;
-        *.tar)       tar xf $1      ;;
-        *.tbz2)      tar xjf $1     ;;
-        *.tgz)       tar xzf $1     ;;
-        *.zip)       unzip $1       ;;
-        *.Z)         uncompress $1  ;;
-        *.7z)        7z x $1        ;;
-        *)     echo "'$1' cannot be extracted via extract()" ;;
-         esac
-     else
-         echo "'$1' is not a valid file"
-     fi
-}
-
+# alias
+#----------
 if [ "$(uname)" == 'Darwin' ]; then
     #ls
     alias ls='ls -hGF'
@@ -94,30 +91,30 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     alias l='ls -Fla --color'
 fi
 
- # 保管
+# 補完
 if [ "$(uname)" == 'Darwin' ]; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
+        . $(brew --prefix)/etc/bash_completion
     fi
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     if [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
+        . /etc/bash_completion
     fi
 fi
 
- if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
-     shopt -s autocd
-     shopt -s cdspell
-     shopt -s dotglob
-     shopt -s globstar
- fi
+if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
+    shopt -s autocd
+    shopt -s cdspell
+    shopt -s dotglob
+    shopt -s globstar
+fi
 
- #emacs
- alias emacs='emacs -q -nw'
- alias e='emacsclient'
+#emacs
+alias emacs='emacs -q -nw'
+alias e='emacsclient'
 
- # git
- alias g='git'
- 
- # docker
- alias d='docker'
+# git
+alias g='git'
+
+# docker
+alias d='docker'

@@ -1,27 +1,28 @@
-# general settings
+# PATH
 #------------------
+# sbin
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
-# flutter
-set -g fish_user_paths "$HOME/git/github.com/flutter/flutter/bin" $fish_user_paths
-set -g fish_user_paths "$HOME/.pub-cache/bin" $fish_user_paths
 # my shell
 set -g fish_user_paths "$HOME/.bin/" $fish_user_paths
-# go
-set -x GOENV_ROOT $HOME/.goenv
-set -g fish_user_paths "$GOENV_ROOT/bin" $fish_user_paths
-set -x GOENV_DISABLE_GOPATH 1
-set -g GOPATH "$HOME/go"
-set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
+# anyenv
+set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
 
+# Env
+#----------
 if which anyenv > /dev/null 2>&1;
     anyenv init - | source
 end
-
 if which direnv > /dev/null 2>&1;
     direnv hook fish | source
 end
 
+# go
+set -g fish_user_paths "$GOENV_ROOT/bin" $fish_user_paths
+set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
+
+# fish general settings
+#-----------
+set fish_greeting
 set GHQ_SELECTOR peco
 
 # key bindings
