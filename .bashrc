@@ -19,6 +19,7 @@ fi
 
 # golang
 PATH="$PATH:$GOENV_ROOT/bin:$GOPATH/bin"
+export GO111MODULE=on
 
 export PATH
 
