@@ -51,6 +51,7 @@ GTAGS
 .config/gatsby/
 .config/anyenv/
 .config/direnv/
+.node-version
 
 # for tssever
 .log/
