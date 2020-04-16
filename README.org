@@ -30,3 +30,4 @@
    - .inputrc      : キーボードマップの設定 (Bashなどのシェルから呼び出されます)
    - .latexmkrc    : LaTeXのmakeファイル設定
    - .tmux.conf    : [[https://github.com/tmux/tmux][tmux]]の設定
+   - .tern-config  : ternの設定(javascript)
