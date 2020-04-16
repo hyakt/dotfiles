@@ -1,0 +1,19 @@
+{
+  "libs": [
+    "browser",
+    "react",
+    "underscore",
+    "ecmascript",
+    "jquery"
+  ],
+    "plugins": {
+    "es_modules": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    },
+    "node": {},
+    "commonjs": {},
+    "node_resolve":{}
+  }
+}
