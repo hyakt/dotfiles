@@ -14,6 +14,7 @@ if which anyenv > /dev/null 2>&1;
 end
 if which direnv > /dev/null 2>&1;
     direnv hook fish | source
+    set -x DIRENV_LOG_FORMAT ""
 end
 
 # go
