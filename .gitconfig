@@ -59,3 +59,5 @@
 	rhh = reset --hard HEAD
 	# backup
 	bk = !git branch backup/`git rev-parse --abbrev-ref HEAD`_`date \"+%Y%m%d%H%M\"`
+	# マージ済みブランチを削除
+	delete-merged-branch = "!f () { git branch --merged | egrep -v '\\*|master|develop' | xargs git branch -d; }; f"
