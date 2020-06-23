@@ -1,0 +1,8 @@
+#!/usr/local/bin/fish
+function main
+    ghq list --full-path | peco | read select
+    echo "remove: $select"
+    [ -n "$select" ]; and rm -rf "$select"
+end
+
+main
