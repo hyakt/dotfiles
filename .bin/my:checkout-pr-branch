@@ -3,7 +3,7 @@
 
 function main --argument pr_id
     echo "--- start 🐖💨 ---"
-    hub pr checkout $pr_id pr/$pr_id
+    gh pr checkout $pr_id pr/$pr_id
     # git checkout $default_branch
     # git fetch upstream "pull/$pr_id/head:pr/$pr_id"
     # git checkout "pr/$pr_id"
