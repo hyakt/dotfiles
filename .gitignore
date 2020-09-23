@@ -52,6 +52,7 @@ GTAGS
 .config/anyenv/
 .config/direnv/
 .node-version
+.config/gh/hosts.yml
 
 # for tssever
 .log/
