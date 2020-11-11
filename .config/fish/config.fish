@@ -21,6 +21,9 @@ end
 set -g fish_user_paths "$GOENV_ROOT/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 
+# deno
+set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
+
 # fish general settings
 #-----------
 set fish_greeting
@@ -60,7 +63,7 @@ balias gdown 'gcloud compute instances stop'
 
 ## docker
 balias d 'docker'
-balias dc 'docker container'
+balias dc 'docker-compose'
 
 ## npm
 balias n 'npm'
