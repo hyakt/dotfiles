@@ -21,6 +21,8 @@ fi
 PATH="$PATH:$GOENV_ROOT/bin:$GOPATH/bin"
 export GO111MODULE=on
 
+PATH="$HOME/.cargo/bin:$PATH"
+
 export PATH
 
 # Editor

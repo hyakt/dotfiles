@@ -21,6 +21,9 @@ end
 set -g fish_user_paths "$GOENV_ROOT/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 
+# rust
+set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
+
 # deno
 set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
 
