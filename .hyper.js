@@ -12,9 +12,10 @@ module.exports = {
     fontSize: 11,
 
     // font family with optional fallbacks
-    fontFamily: '"Source Han Code JP", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily:
+      '"Source Han Code JP", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
-      // default font weight: 'normal' or 'bold'
+    // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
 
     // font weight for bold characters: 'normal' or 'bold'
@@ -88,7 +89,7 @@ module.exports = {
       lightBlue: '#6A76FB',
       lightMagenta: '#FD7CFC',
       lightCyan: '#68FDFE',
-      lightWhite: '#FFFFFF',
+      lightWhite: '#FFFFFF'
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -130,13 +131,7 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
     hyperline: {
-      plugins: [
-        "hostname",
-        "ip",
-        "cpu",
-        "memory",
-        "network"
-      ]
+      plugins: ['hostname', 'ip', 'cpu', 'memory', 'network']
     }
   },
 
@@ -147,14 +142,14 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-tab-icons-plus",
-    "hyperlinks",
-    "hypercwd",
-    "hyper-search",
-    "hyper-broadcast",
-    "hyperterm-tabs",
-    "hyperterm-paste",
-    "hyper-electron-highlighter"
+    'hyper-tab-icons-plus',
+    'hyperlinks',
+    'hypercwd',
+    'hyper-search',
+    'hyper-broadcast',
+    'hyperterm-tabs',
+    'hyperterm-paste',
+    'hyper-rose-pine'
   ],
 
   // in development, you can create a directory under
@@ -165,5 +160,5 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
-  },
-};
+  }
+}
