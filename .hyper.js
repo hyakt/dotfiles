@@ -53,7 +53,10 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: `
+    .tab_textActive {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }`,
 
     // custom CSS to embed in the terminal window
     termCSS: '',
