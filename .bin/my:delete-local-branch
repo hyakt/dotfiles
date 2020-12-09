@@ -1,0 +1,8 @@
+#!/usr/local/bin/fish
+function main
+    git branch --format="%(refname:short)" | peco | read select
+    echo "remove: $select"
+    [ -n "$select" ]; and git branch -D "$select"
+end
+
+main $argv
