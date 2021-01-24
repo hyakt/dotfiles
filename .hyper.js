@@ -152,7 +152,7 @@ module.exports = {
     'hyper-broadcast',
     'hyperterm-tabs',
     'hyperterm-paste',
-    'hyper-rose-pine'
+    'hyperterm-oceanic-next'
   ],
 
   // in development, you can create a directory under
