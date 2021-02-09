@@ -21,7 +21,11 @@ fi
 PATH="$PATH:$GOENV_ROOT/bin:$GOPATH/bin"
 export GO111MODULE=on
 
+# rust
 PATH="$HOME/.cargo/bin:$PATH"
+
+# Android
+PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 export PATH
 

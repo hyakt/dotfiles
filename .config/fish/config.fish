@@ -27,6 +27,10 @@ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 # deno
 set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
 
+# Android
+set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_paths
+
+
 # fish general settings
 #-----------
 set fish_greeting
