@@ -11,7 +11,7 @@ PATH="$HOME/.anyenv/bin:$PATH"
 # Env
 #----------
 if type anyenv > /dev/null 2>&1; then
-    eval "$(anyenv init -)"
+    eval "$(anyenv init - bash)"
 fi
 if type direnv > /dev/null 2>&1; then
     eval "$(direnv hook bash)"
