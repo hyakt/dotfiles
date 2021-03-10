@@ -48,11 +48,11 @@ set_prompt () {
     BPurple='\[\e[1;35m\]'      # Purple
     Reset='\[\e[00m\]'
 
-    # プロンプトにgit各種情報を表示しない
-    GIT_PS1_SHOWDIRTYSTATE=
-    GIT_PS1_SHOWUPSTREAM=
+    GIT_PS1_SHOWDIRTYSTATE=true      # *:unstaged, +:staged
     GIT_PS1_SHOWUNTRACKEDFILES=
-    GIT_PS1_SHOWSTASHSTATE=
+    GIT_PS1_SHOWSTASHSTATE=true      # $:stashed
+    GIT_PS1_SHOWUPSTREAM=
+    GIT_PS1_STATESEPARATOR=
 
     # Add a bright white exit status for the last command
     PS1=""
@@ -67,7 +67,8 @@ set_prompt () {
         PS1+="$BPurple"
     fi
 
-    PS1+="\\w "
+    PS1+="\\w"
+    PS1+="${Cyan}$(__git_ps1) "
 
     # If it was successful, print a green check mark. Otherwise, print
     # a red X.
@@ -101,6 +102,9 @@ fi
 # 補完
 if [ "$(uname)" == 'Darwin' ]; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+    else
+        brew install bash-completion
         . $(brew --prefix)/etc/bash_completion
     fi
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
