@@ -104,7 +104,7 @@ if [ "$(uname)" == 'Darwin' ]; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
     else
-        brew install bash-completion
+        brew install bash-completion git
         . $(brew --prefix)/etc/bash_completion
     fi
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
