@@ -107,6 +107,10 @@ if [ "$(uname)" == 'Darwin' ]; then
         brew install bash-completion git
         . $(brew --prefix)/etc/bash_completion
     fi
+    if [ -f $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
+        . $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+        . $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+    fi
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     if [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
