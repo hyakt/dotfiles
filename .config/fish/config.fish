@@ -41,7 +41,7 @@ set GHQ_SELECTOR peco
 #-----------
 function fish_user_key_bindings
     bind \cr 'peco_select_history (commandline -b)'
-    bind \cb peco_checkout_git_branch
+    bind \cx peco_checkout_git_branch
 end
 
 # editor
