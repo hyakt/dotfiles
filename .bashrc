@@ -27,6 +27,9 @@ PATH="$HOME/.cargo/bin:$PATH"
 # Android
 PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
+# Deno
+PATH="$HOME/.deno/bin:$PATH"
+
 export PATH
 
 # Editor
