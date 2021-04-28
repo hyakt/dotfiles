@@ -33,7 +33,7 @@ export GO111MODULE=on
 # rust
 PATH="$HOME/.cargo/bin:$PATH"
 
-# deno
+# Deno
 PATH="$HOME/.deno/bin:$PATH"
 
 # Android
