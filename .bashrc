@@ -10,12 +10,21 @@ PATH="$HOME/.anyenv/bin:$PATH"
 
 # Env
 #----------
-if type anyenv > /dev/null 2>&1; then
-    eval "$(anyenv init - bash)"
-fi
+source $(brew --prefix asdf)/asdf.sh
 if type direnv > /dev/null 2>&1; then
     eval "$(direnv hook bash)"
 fi
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+      [[ -r "$COMPLETION" ]] && source "$COMPLETION"
+    done
+  fi
+fi
+
 
 # golang
 PATH="$PATH:$GOENV_ROOT/bin:$GOPATH/bin"
@@ -23,6 +32,9 @@ export GO111MODULE=on
 
 # rust
 PATH="$HOME/.cargo/bin:$PATH"
+
+# deno
+PATH="$HOME/.deno/bin:$PATH"
 
 # Android
 PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"

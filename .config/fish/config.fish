@@ -9,12 +9,16 @@ set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
 
 # Env
 #----------
-if which anyenv > /dev/null 2>&1;
-    anyenv init - | source
-end
+source (brew --prefix asdf)/asdf.fish
 if which direnv > /dev/null 2>&1;
     direnv hook fish | source
     set -x DIRENV_LOG_FORMAT ""
+end
+if test -d (brew --prefix)"/share/fish/completions"
+    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
+end
+if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
 
 # go
@@ -29,8 +33,7 @@ set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
 
 # Android
 set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_paths
-
-source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+set -g fish_user_paths "$HOME/Library/Android/sdk/emulator" $fish_user_paths
 
 # fish general settings
 #-----------

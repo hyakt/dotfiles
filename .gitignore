@@ -53,7 +53,7 @@ GTAGS
 .config/direnv/
 .node-version
 .config/gh/hosts.yml
-
-# for tssever
 .log/
 tsfmt.json
+.dir-locales.el
+.config/gh/state.yml
