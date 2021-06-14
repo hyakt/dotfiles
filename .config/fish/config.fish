@@ -35,6 +35,9 @@ set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_paths
 set -g fish_user_paths "$HOME/Library/Android/sdk/emulator" $fish_user_paths
 
+# gcloud
+source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
 # fish general settings
 #-----------
 set fish_greeting
