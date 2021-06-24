@@ -63,4 +63,4 @@
 	delete-merged-branch = "!f () { git branch --merged | egrep -v '\\*|master|develop|release' | xargs git branch -d; }; f"
 	# コミットハッシュからPRを検索
 	showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1; }; f"
-	openpr = "!f() { gh pr view -- `git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%%'`; }; f"
+	openpr = "!f() { gh pr view --web -- `git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%%'`; }; f"
