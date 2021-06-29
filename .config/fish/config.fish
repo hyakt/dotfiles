@@ -35,6 +35,9 @@ set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_paths
 set -g fish_user_paths "$HOME/Library/Android/sdk/emulator" $fish_user_paths
 
+# gcloud
+source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
 # fish general settings
 #-----------
 set fish_greeting
@@ -58,9 +61,21 @@ export SVN_EDITOR='vim'
 balias g git
 balias e emacsclient
 if which exa > /dev/null 2>&1;
-    balias ls 'exa'
+    balias ls exa
     balias l exa
 end
+
+## docker
+balias d 'docker'
+balias dc 'docker-compose'
+
+## node
+balias n 'npm'
+balias y 'yarn'
+
+## ruby
+balias r rails
+balias be 'bundle exec'
 
 ## gcloud
 balias gcp 'gcloud compute copy-files'
@@ -68,16 +83,3 @@ balias glist 'gcloud compute instances list'
 balias gsh 'gcloud compute ssh'
 balias gup 'gcloud compute instances start'
 balias gdown 'gcloud compute instances stop'
-
-## docker
-balias d 'docker'
-balias dc 'docker-compose'
-
-## npm
-balias n 'npm'
-
-## yarn
-balias y 'yarn'
-
-## rails
-balias r rails
