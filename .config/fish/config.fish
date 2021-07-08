@@ -36,7 +36,7 @@ set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_pat
 set -g fish_user_paths "$HOME/Library/Android/sdk/emulator" $fish_user_paths
 
 # gcloud
-if test -d (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+if test -e (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
     source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 end
 
