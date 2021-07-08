@@ -36,7 +36,9 @@ set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_pat
 set -g fish_user_paths "$HOME/Library/Android/sdk/emulator" $fish_user_paths
 
 # gcloud
-source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+if test -d (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+    source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+end
 
 # fish general settings
 #-----------
@@ -48,6 +50,7 @@ set GHQ_SELECTOR peco
 function fish_user_key_bindings
     bind \cr 'peco_select_history (commandline -b)'
     bind \cx peco_checkout_git_branch
+    bind \cq 'cd (git rev-parse --show-toplevel); commandline -f repaint;'
 end
 
 # editor
