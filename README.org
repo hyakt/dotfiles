@@ -5,14 +5,21 @@
    下記をターミナルで実行
    #+BEGIN_SRC sh
      ## create symlink
+     mkdir -p ~/repos/github.com/hyakt/ && cd ~/repos/github.com/hyakt/
+     git clone https://github.com/hyakt/dotfiles
+     cd dotfiles
      chmod +x ./symlink.sh
+     rm -rf ~/.config
      bash ./symlink.sh
      ## fish
      brew install fish
      sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
      chsh -s /usr/local/bin/fish
      fish
+     cd $__fish_config_dir
      curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+     git reset --hard head
+     fisher update
      ## asdf
      brew install coreutils curl git
      brew install asdf
