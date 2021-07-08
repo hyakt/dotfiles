@@ -135,6 +135,10 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
     hyperline: {
       plugins: ['hostname', 'ip', 'cpu', 'memory', 'network']
+    },
+
+    modifierKeys: {
+      altIsMeta: true
     }
   },
 
