@@ -139,7 +139,9 @@ module.exports = {
 
     modifierKeys: {
       altIsMeta: true
-    }
+    },
+
+    scrollback: 10000
   },
 
   // a list of plugins to fetch and install from npm
