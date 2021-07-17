@@ -47,7 +47,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
    x: 12
-   y: 32
+   y: 10
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -831,9 +831,10 @@ key_bindings:
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
-  - { key: T,             mods: Command,       chars: "\x1bt"}
-  - { key: LBracket,    mods: Command|Shift,             chars: "\x1B{"           }
-  - { key: RBracket,    mods: Command|Shift,             chars: "\x1B}"           }
+  - { key: T,              mods: Command,                    chars: "\x1bt"                }
+  - { key: W,              mods: Command,                    chars: "\x1bw",               }
+  - { key: LBracket,       mods: Command|Shift,              chars: "\x1B{"                }
+  - { key: RBracket,       mods: Command|Shift,              chars: "\x1B}"                }
 
 #debug:
   # Display the time it takes to redraw each frame.
