@@ -424,7 +424,7 @@ shell:
  args:
    - --login
    - -c
-   - "/usr/local/bin/tmux a -t 0 || /usr/local/bin/tmux"
+   - "/usr/local/bin/tmux a -t alacritty || /usr/local/bin/tmux new -s alacritty"
 
 # Startup directory
 #
