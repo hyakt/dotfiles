@@ -419,10 +419,12 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+ program: /usr/local/bin/fish
+ args:
+   - --login
+   - -c
+   - "/usr/local/bin/tmux a -t 0 || /usr/local/bin/tmux"
 
 # Startup directory
 #
@@ -829,6 +831,9 @@ key_bindings:
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
+  - { key: T,             mods: Command,       chars: "\x1bt"}
+  - { key: LBracket,    mods: Command|Shift,             chars: "\x1B{"           }
+  - { key: RBracket,    mods: Command|Shift,             chars: "\x1B}"           }
 
 #debug:
   # Display the time it takes to redraw each frame.
