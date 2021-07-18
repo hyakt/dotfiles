@@ -1,7 +1,7 @@
 * .bin
   ユーティリティシェルを管理
 
-  - fish用PATH: =/.config/fifish/config.fish=
+  - fish用PATH: =/.config/fish/config.fish=
   - Bash用PATH: 未設定
 
 ** How To Use 💁‍♀️
@@ -9,8 +9,8 @@
 
    #+NAME: example
    #+BEGIN_SRC sh
-   # 例)
-   my:helloworld
+     # 例)
+     my:helloworld
    #+END_SRC
 
 ** Rules 👮🏻‍♂️
