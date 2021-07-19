@@ -423,7 +423,7 @@ shell:
  program: /usr/local/bin/fish
  args:
    - --login
-   - -c
+   - -C
    - "/usr/local/bin/tmux a -t alacritty || /usr/local/bin/tmux new -s alacritty"
 
 # Startup directory
