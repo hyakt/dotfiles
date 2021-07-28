@@ -7,7 +7,7 @@
 which -s brew
 if [[ $? != 0 ]] ; then
     echo "🐷 < Install homebrew!"
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sh
 fi
 
 # brew bundle install
