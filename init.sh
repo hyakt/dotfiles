@@ -38,8 +38,8 @@ if [[ $SHELL != "/usr/local/bin/fish" ]] ; then
     fish
 fi
 # cd $__fish_config_dir
-# fish -c curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-# git reset --hard head
+# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+# git checkout fish_plugins
 # fisher update
 
 exit 0
