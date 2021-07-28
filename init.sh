@@ -13,7 +13,7 @@ fi
 # brew bundle install
 echo ""
 echo "🐷 < Bundle install homebrew!"
-brew bundle install
+brew bundle --no-lock install
 
 echo ""
 echo "🐷 < Create dotfiles symlink!"
@@ -23,7 +23,7 @@ git clone https://github.com/hyakt/dotfiles
 cd dotfiles
 chmod +x ./symlink.sh
 rm -rf ~/.config
-./symlink.sh
+sh ./symlink.sh
 
 ## tmux
 echo "🐷 < tpm!"
