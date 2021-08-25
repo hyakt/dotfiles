@@ -4,7 +4,7 @@
 ** Let's start 🐖💨
    下記をターミナルで実行
    #+BEGIN_SRC sh
-   ./init.sh
+   curl -fsSL https://raw.githubusercontent.com/hyakt/dotfiles/HEAD/init.sh | sh
    #+END_SRC
 
 ** File and directory 📚
