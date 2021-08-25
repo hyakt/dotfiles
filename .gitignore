@@ -51,7 +51,6 @@ GTAGS
 .config/gatsby/
 .config/anyenv/
 .config/direnv/
-.node-version
 .config/gh/hosts.yml
 .log/
 tsfmt.json
