@@ -1,11 +1,24 @@
 # PATH
 #------------------
 # sbin
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+fish_add_path /usr/local/sbin
 # my shell
-set -g fish_user_paths "$HOME/.bin/" $fish_user_paths
-# anyenv
-set -g fish_user_paths "$HOME/.anyenv/bin" $fish_user_paths
+fish_add_path $HOME/.bin/
+# go
+fish_add_path $GOENV_ROOT/bin
+fish_add_path $GOPATH/bin
+# rust
+fish_add_path $HOME/.cargo/bin
+# deno
+fish_add_path $HOME/.deno/bin
+# Android
+fish_add_path $HOME/Library/Android/sdk/platform-tools
+fish_add_path $HOME/Library/Android/sdk/emulator
+fish_add_path /usr/local/opt/openjdk/bin
+# gcloud
+if test -e (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+    source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+end
 
 # Env
 #----------
@@ -21,24 +34,6 @@ if test -d (brew --prefix)"/share/fish/vendor_completions.d"
     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
 
-# go
-set -g fish_user_paths "$GOENV_ROOT/bin" $fish_user_paths
-set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
-
-# rust
-set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
-
-# deno
-set -g fish_user_paths "$HOME/.deno/bin" $fish_user_paths
-
-# Android
-set -g fish_user_paths "$HOME/Library/Android/sdk/platform-tools" $fish_user_paths
-set -g fish_user_paths "$HOME/Library/Android/sdk/emulator" $fish_user_paths
-
-# gcloud
-if test -e (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
-    source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
-end
 
 # fish general settings
 #-----------
