@@ -21,6 +21,9 @@
 	autocrlf = input             # CRLFを自動変換
 	editor = vim
 	quotepath = false
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
 [alias]
 	st = status
 	sh = show
