@@ -145,3 +145,4 @@ alias g='git'
 
 # docker
 alias d='docker'
+. "$HOME/.cargo/env"
