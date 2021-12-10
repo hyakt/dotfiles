@@ -68,4 +68,5 @@
 	showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1; }; f"
 	openpr = "!f() { gh pr view --web -- `git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%%'`; }; f"
 	# ベースブランチを検索
-	parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+	# parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+	parent = "!git show-branch | sed \"s/].*//\" | grep \"\\*\" | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed \"s/^.*\\[//\" | sed \"s/\\^[0-9]*//\""
