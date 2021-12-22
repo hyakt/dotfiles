@@ -22,6 +22,10 @@
 	editor = vim
 	quotepath = false
 	pager = delta
+[delta]
+	side-by-side = true
+	navigate = true
+	hyperlinks = true
 [interactive]
 	diffFilter = delta --color-only
 [alias]
