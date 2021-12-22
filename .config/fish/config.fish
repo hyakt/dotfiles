@@ -63,6 +63,9 @@ if which exa > /dev/null 2>&1;
     balias ls exa
     balias l exa
 end
+if which bat > /dev/null 2>&1;
+    balias cat bat
+end
 
 ## docker
 balias d 'docker'
