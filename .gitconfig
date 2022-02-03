@@ -3,6 +3,8 @@
 	email = hyakt0@gmail.com
 [github]
 	user = hyakt
+[init]
+	defaultBranch = main
 [ghq]
 	root = ~/repos
 [color]
