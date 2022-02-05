@@ -16,6 +16,8 @@
 	grep = auto
 [push]
 	default = simple            # カレントブランチと同名のリモートブランチがあればpush. なければremote側に作成.
+[pull]
+	rebase = false
 [rebase]
 	autostash = true
 [core]
