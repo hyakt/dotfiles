@@ -54,5 +54,4 @@ GTAGS
 .config/gh/hosts.yml
 .log/
 tsfmt.json
-.dir-locals.el
 .config/gh/state.yml
