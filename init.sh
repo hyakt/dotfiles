@@ -10,11 +10,6 @@ if [[ $? != 0 ]] ; then
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sh
 fi
 
-# brew bundle install
-echo ""
-echo "🐷 < Bundle install homebrew!"
-brew bundle --no-lock install
-
 echo ""
 echo "🐷 < Create dotfiles symlink!"
 mkdir -p ~/repos/github.com/hyakt/
@@ -24,6 +19,11 @@ cd dotfiles
 chmod +x ./symlink.sh
 rm -rf ~/.config
 sh ./symlink.sh
+
+# brew bundle install
+echo ""
+echo "🐷 < Bundle install homebrew!"
+brew bundle --no-lock install
 
 ## tmux
 echo "🐷 < tpm!"
