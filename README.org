@@ -6,17 +6,3 @@
    #+BEGIN_SRC sh
    curl -fsSL https://raw.githubusercontent.com/hyakt/dotfiles/HEAD/init.sh | sh
    #+END_SRC
-
-** File and directory 📚
-   - .aspell.conf  : スペルチェッカの設定 (brew install aspell)
-   - .bash_profile : bashのパスなどの設定 (設定は.bashrcへ)
-   - .bashrc       : bashの設定
-   - .bin          : 自分用ユーティリティシェルの設定
-   - .config       : [[https://github.com/fish-shell/fish-shell][fish]]などの設定はこちら
-   - .gitconfig    : 共通のGitの設定 ($HOMEにこれをincludeするリンクが貼られる)
-   - .gitignore    : 共通の.gitignoreの設定
-   - .hyper.js     : [[https://hyper.is/][Hyper]] の設定 (brew cask install hyper)
-   - .inputrc      : キーボードマップの設定 (Bashなどのシェルから呼び出されます)
-   - .latexmkrc    : LaTeXのmakeファイル設定
-   - .tmux.conf    : [[https://github.com/tmux/tmux][tmux]]の設定
-   - .tern-config  : ternの設定(javascript)
