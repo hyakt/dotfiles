@@ -37,7 +37,7 @@ PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.deno/bin:$PATH"
 
 # Android
-PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+PATH="$HOME/Library/Android/sdk/tools"
 
 export PATH
 
