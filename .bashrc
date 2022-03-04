@@ -4,9 +4,7 @@
 # sbin
 PATH="$PATH:/usr/local/sbin"
 # my shell
-PAHT="$PATH:$HOME/.bin/"
-# anyenv
-PATH="$HOME/.anyenv/bin:$PATH"
+PATH="$PATH:$HOME/.bin/"
 
 # Env
 #----------
@@ -37,7 +35,7 @@ PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.deno/bin:$PATH"
 
 # Android
-PATH="$HOME/Library/Android/sdk/tools"
+PATH="$HOME/Library/Android/sdk/tools:$PATH"
 
 export PATH
 
@@ -145,4 +143,3 @@ alias g='git'
 
 # docker
 alias d='docker'
-. "$HOME/.cargo/env"
