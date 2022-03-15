@@ -29,6 +29,7 @@ brew bundle --no-lock install
 echo "🐷 < tpm!"
 mkdir -p ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# and then Press prefix + I (capital i, as in Install) to fetch the plugin.
 
 ## fish
 echo '🐷 < chsh fish!'
