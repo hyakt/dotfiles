@@ -39,6 +39,8 @@ PATH="$HOME/Library/Android/sdk/tools:$PATH"
 
 export PATH
 
+export FZF_DEFAULT_OPTS='--layout=reverse --border --exit-0'
+
 # Editor
 #----------
 export EDITOR='vim'
