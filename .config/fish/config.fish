@@ -12,7 +12,7 @@ fish_add_path $HOME/.cargo/bin
 # deno
 fish_add_path $HOME/.deno/bin
 # Android
-fish_add_path $HOME/Library/Android/sdk/tools
+fish_add_path $HOME/Library/Android/sdk/emulator
 fish_add_path /usr/local/opt/openjdk/bin
 # gcloud
 if test -e (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
