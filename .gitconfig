@@ -15,7 +15,7 @@
 	interactive = auto
 	grep = auto
 [push]
-	default = current            # カレントブランチと同名のリモートブランチがあればpush. なければremote側に作成.
+	default = simple
 [pull]
 	rebase = false
 [rebase]
