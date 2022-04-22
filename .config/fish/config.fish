@@ -47,6 +47,7 @@ function fish_user_key_bindings
     bind \cq 'cd (git rev-parse --show-toplevel); commandline -f repaint;'
     bind \ct 'tmux attach -t (tmux ls | peco | cut -d : -f 1)'
     bind \ep my:fzf-checkout-pr-branch
+    bind \eo 'gh pr view --web'
 end
 
 # editor
