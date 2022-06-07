@@ -72,7 +72,8 @@
 	# backup
 	bk = !git branch backup/`git rev-parse --abbrev-ref HEAD`_`date \"+%Y%m%d%H%M\"`
 	# マージ済みブランチを削除
-	delete-merged-branch = "!f () { git branch --merged | egrep -v '\\*|master|develop|release|main|milestone' | xargs git branch -d; }; f"
+	delete-merged = "!f () { git branch --merged | egrep -v '\\*|master|develop|release|main|milestone|beta' | xargs git branch -d; }; f"
+	delete-squashed = "!f() { local targetBranch=${1:-main} && git checkout -q $targetBranch && git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d && git for-each-ref refs/heads/ \"--format=%(refname:short)\" | while read branch; do mergeBase=$(git merge-base $targetBranch $branch) && [[ $(git cherry $targetBranch $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == \"-\"* ]] && git branch -D $branch; done; }; f"
 	# コミットハッシュからPRを検索
 	showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1; }; f"
 	openpr = "!f() { gh pr view --web -- `git log --merges --oneline --reverse --ancestry-path $1..HEAD | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%%'`; }; f"
