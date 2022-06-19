@@ -33,6 +33,12 @@ if test -d (brew --prefix)"/share/fish/vendor_completions.d"
     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
 export FZF_DEFAULT_OPTS='--layout=reverse --border none --exit-0'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+ --color=fg:#f0f0f0,bg:-1,hl:#5f87af
+ --color=fg+:#ffffff,bg+:-1,hl+:#5fd7ff
+ --color=info:#afaf87,prompt:#ff529d,pointer:#7eebfc
+ --color=marker:#87ff00,spinner:#af5fff,header:#87afaf'
+
 
 # fish general settings
 #-----------
@@ -41,12 +47,11 @@ set fish_greeting
 # key bindings
 #-----------
 function fish_user_key_bindings
-    bind \cr 'peco_select_history (commandline -b)'
-    bind \cx peco_checkout_git_branch
-    bind \cq 'cd (git rev-parse --show-toplevel); commandline -f repaint;'
-    bind \ct 'tmux attach -t (tmux ls | peco | cut -d : -f 1)'
-    bind \ep my:fzf-checkout-pr-branch
-    bind \eo 'gh pr view --web'
+    bind \cr fzf_history
+    bind \cx fzf_checkout_git_branch
+    bind \ct 'tmux attach -t (tmux ls | fzf | cut -d : -f 1)'
+    bind \ep fzf_checkout_gh_pr
+    bind \ed fzf_cd_git
 end
 
 # editor
