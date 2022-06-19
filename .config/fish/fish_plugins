@@ -2,13 +2,10 @@ jorgebucaran/fisher
 0rax/fish-bd
 decors/fish-ghq
 edc/bass
-fisherman/fzf
 fisherman/getopts
 fisherman/gitignore
 fisherman/spin
 fisherman/z
-hyakt/fish-peco_checkout_git_branch
 oh-my-fish/plugin-balias
-oh-my-fish/plugin-peco
-tsu-nera/fish-peco_recentd
 hyakt/luna
+hyakt/fish-peco_checkout_git_branch

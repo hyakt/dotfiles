@@ -32,12 +32,11 @@ end
 if test -d (brew --prefix)"/share/fish/vendor_completions.d"
     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
-export FZF_DEFAULT_OPTS='--layout=reverse --border --exit-0'
+export FZF_DEFAULT_OPTS='--layout=reverse --border none --exit-0'
 
 # fish general settings
 #-----------
 set fish_greeting
-set GHQ_SELECTOR peco
 
 # key bindings
 #-----------
