@@ -1,6 +1,8 @@
 # PATH
 # マシン個別PATHの設定は.bash_profileに記載する
 #----------
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # sbin
 PATH="$PATH:/usr/local/sbin"
 # my shell
