@@ -32,7 +32,7 @@ end
 if test -d (brew --prefix)"/share/fish/vendor_completions.d"
     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
-export FZF_DEFAULT_OPTS='--layout=reverse --border none --exit-0'
+export FZF_DEFAULT_OPTS='--layout=reverse --border=none --info=hidden --exit-0'
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#f0f0f0,bg:-1,hl:#5f87af
  --color=fg+:#ffffff,bg+:-1,hl+:#5fd7ff
