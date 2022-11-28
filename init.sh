@@ -32,12 +32,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # and then Press prefix + I (capital i, as in Install) to fetch the plugin.
 
 ## fish
-echo '🐷 < chsh fish!'
-if [[ $SHELL != "/usr/local/bin/fish" ]] ; then
-    sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
-    chsh -s /usr/local/bin/fish
-    fish
-fi
+# echo '🐷 < chsh fish!'
+# if [[ $SHELL != "/usr/local/bin/fish" ]] ; then
+#     sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
+#     chsh -s /usr/local/bin/fish
+#     fish
+# fi
 # cd $__fish_config_dir
 # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 # git checkout fish_plugins
