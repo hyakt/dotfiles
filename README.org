@@ -1,8 +1,7 @@
 * dotfiles
   [[https://github.com/hyakt/.emacs.d][.emacs.d]]は別repoで管理
 
-** Let's start 🐖💨
-   下記をターミナルで実行
+** Getting started 🐖💨
    #+BEGIN_SRC sh
    curl -fsSL https://raw.githubusercontent.com/hyakt/dotfiles/HEAD/init.sh | sh
    #+END_SRC
