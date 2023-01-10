@@ -10,6 +10,10 @@ PATH="$PATH:$HOME/.bin/"
 
 # Env
 #----------
+if [[ -z /opt/homebrew/bin/brew ]]; then
+    eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 source $(brew --prefix asdf)/asdf.sh
 if type direnv > /dev/null 2>&1; then
     eval "$(direnv hook bash)"
