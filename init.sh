@@ -1,46 +1,45 @@
 #!/usr/bin/env bash
 
+REPO_PATH="$HOME/repos/github.com/hyakt/"
+TPM_PATH="$HOME/.config/tmux/plugins/tpm"
+
 # for macOS
 # -------------------
-# install homebrew
-# https://brew.sh/index_ja
-which -s brew
-if [[ $? != 0 ]] ; then
-    echo "🐷 < Install homebrew!"
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sh
+echo "🐷< Create dotfile symlinks"
+echo "--------------------"
+if [ ! -d $REPO_PATH/dotfiles ]; then
+    mkdir -p $REPO_PATH
+    git clone https://github.com/hyakt/dotfiles $REPO_PATH
 fi
-
-echo ""
-echo "🐷 < Create dotfiles symlink!"
-mkdir -p ~/repos/github.com/hyakt/
-cd ~/repos/github.com/hyakt/
-git clone https://github.com/hyakt/dotfiles
-cd dotfiles
-chmod +x ./symlink.sh
+cd $REPO_PATH/dotfiles
 rm -rf ~/.config
+chmod +x ./symlink.sh
 sh ./symlink.sh
 
-# brew bundle install
 echo ""
-echo "🐷 < Bundle install homebrew!"
+echo "🐷< Install homebrew"
+echo "--------------------"
+which -s brew
+if [[ $? != 0 ]] ; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 brew bundle --no-lock install
 
-## tmux
-echo "🐷 < tpm!"
-mkdir -p ~/.tmux/plugins/tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# and then Press prefix + I (capital i, as in Install) to fetch the plugin.
+echo ""
+echo "🐷< Setup tmux"
+echo "--------------------"
+if [ ! -d $TPM_PATH ]; then
+    mkdir -p $TPM_PATH
+    git clone https://github.com/tmux-plugins/tpm $TPM_PATH
+fi
+sh $TPM_PATH/scripts/install_plugins.sh
 
-## fish
-# echo '🐷 < chsh fish!'
-# if [[ $SHELL != "/usr/local/bin/fish" ]] ; then
-#     sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
-#     chsh -s /usr/local/bin/fish
-#     fish
-# fi
-# cd $__fish_config_dir
-# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-# git checkout fish_plugins
-# fisher update
+echo ""
+echo "🐷< Setup fish"
+echo "--------------------"
+fish -c "cd $__fish_config_dir;
+     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher;
+     git checkout fish_plugins;
+     fisher update;"
 
 exit 0
