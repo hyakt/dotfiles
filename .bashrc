@@ -14,7 +14,9 @@ if [ -e /opt/homebrew/bin/brew ]; then
     eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-source $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
 if type direnv > /dev/null 2>&1; then
     eval "$(direnv hook bash)"
 fi
