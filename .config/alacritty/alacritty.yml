@@ -414,11 +414,11 @@ cursor:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
- program: /usr/local/bin/fish
+ program: /bin/bash
  args:
    - --login
-   - -C
-   - "/usr/local/bin/tmux a -t alacritty || /usr/local/bin/tmux new -s alacritty"
+   - -c
+   - "tmux a -t default || tmux new -s default"
 
 # Startup directory
 #
