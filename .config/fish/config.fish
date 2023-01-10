@@ -21,7 +21,8 @@ end
 
 # Env
 #----------
-source (brew --prefix asdf)/asdf.fish
+source (brew --prefix asdf)/libexec/asdf.fish
+
 if which direnv > /dev/null 2>&1;
     direnv hook fish | source
     set -x DIRENV_LOG_FORMAT ""
