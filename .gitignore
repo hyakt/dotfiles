@@ -23,7 +23,6 @@ Temporary Items
 .apdisk
 
 # User Added
-.zshenv
 *.iml
 .config/anyenv/
 .config/configstore/
@@ -38,19 +37,22 @@ Temporary Items
 .config/fisherman/
 .config/gatsby/
 .config/gcloud/
-.config/gh/hosts.yml
-.config/gh/state.yml
+.config/gh/
 .config/htop/
-.config/hub
+.config/hub/
 .config/karabiner/
 .config/raycast/
+.config/tabtab/
 .config/tmux/plugins/
 .config/yarn/
 .idea
 .log/
 .meghanada
 .tern-port
+.zshenv
 GPATH
 GRTAGS
 GTAGS
 tsfmt.json
+
+.dir-locals.el
