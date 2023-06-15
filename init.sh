@@ -3,8 +3,23 @@
 REPO_PATH="$HOME/repos/github.com/hyakt/"
 TPM_PATH="$HOME/.config/tmux/plugins/tpm"
 
+
+
 # for macOS
 # -------------------
+
+echo ""
+echo "🐷< Install XCode Command Line"
+echo "--------------------"
+
+which -s xcode-select
+if [[ $? != 0 ]] ; then
+    xcode-select --install
+    else
+      echo "Already XCode Command Line installed";
+fi
+
+echo ""
 echo "🐷< Create dotfile symlinks"
 echo "--------------------"
 if [ ! -d $REPO_PATH/dotfiles ]; then
@@ -21,7 +36,9 @@ echo "🐷< Install homebrew"
 echo "--------------------"
 which -s brew
 if [[ $? != 0 ]] ; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+    else
+      echo "Already homebrew installed";
 fi
 brew bundle --no-lock install
 
