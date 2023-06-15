@@ -4,7 +4,6 @@ REPO_PATH="$HOME/repos/github.com/hyakt/"
 TPM_PATH="$HOME/.config/tmux/plugins/tpm"
 
 
-
 # for macOS
 # -------------------
 
@@ -18,6 +17,11 @@ if [[ $? != 0 ]] ; then
     else
       echo "Already XCode Command Line installed";
 fi
+
+echo ""
+echo "🐷< Change shell to bash"
+echo "--------------------"
+chsh -s /bin/bash
 
 echo ""
 echo "🐷< Create dotfile symlinks"
