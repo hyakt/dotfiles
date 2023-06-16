@@ -28,7 +28,7 @@ echo "🐷< Create dotfile symlinks"
 echo "--------------------"
 if [ ! -d $REPO_PATH/dotfiles ]; then
     mkdir -p $REPO_PATH
-    git clone https://github.com/hyakt/dotfiles $REPO_PATH
+    git clone https://github.com/hyakt/dotfiles $REPO_PATH/dotfiles
 fi
 cd $REPO_PATH/dotfiles
 rm -rf ~/.config
