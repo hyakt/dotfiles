@@ -832,7 +832,7 @@ key_bindings:
   # - { key: C,              mods: Command,                    chars: "\x1bc"                }
   - { key: D,              mods: Command,                    chars: "\x1bd"                }
   - { key: E,              mods: Command,                    chars: "\x1be"                }
-  # - { key: F,              mods: Command,                    chars: "\x1bf"                }
+  - { key: F,              mods: Command,                    chars: "\x1bf"                }
   - { key: G,              mods: Command,                    chars: "\x1bg"                }
   - { key: H,              mods: Command,                    chars: "\x1bh"                }
   - { key: I,              mods: Command,                    chars: "\x1bi"                }
@@ -845,7 +845,7 @@ key_bindings:
   - { key: P,              mods: Command,                    chars: "\x1bp"                }
   # - { key: Q,              mods: Command,                    chars: "\x1bq"                }
   - { key: R,              mods: Command,                    chars: "\x1br"                }
-  - { key: S,              mods: Command,                    chars: "\x1bs"                }
+  # - { key: S,              mods: Command,                    chars: "\x1bs"                }
   - { key: T,              mods: Command,                    chars: "\x1bt"                }
   - { key: U,              mods: Command,                    chars: "\x1bu"                }
   # - { key: V,              mods: Command,                    chars: "\x1bv"                }
