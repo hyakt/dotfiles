@@ -41,7 +41,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=marker:#87ff00,spinner:#af5fff,header:#87afaf'
 
 function vterm_printf;
-    if begin; [  -n "$TMUX" ]  ; and  string match -q -r "screen|tmux" "$TERM"; end 
+    if begin; [  -n "$TMUX" ]  ; and  string match -q -r "screen|tmux" "$TERM"; end
         # tell tmux to pass the escape sequences through
         printf "\ePtmux;\e\e]%s\007\e\\" "$argv"
     else if string match -q -- "screen*" "$TERM"
@@ -102,3 +102,7 @@ balias glist 'gcloud compute instances list'
 balias gsh 'gcloud compute ssh'
 balias gup 'gcloud compute instances start'
 balias gdown 'gcloud compute instances stop'
+
+## util
+balias my:rename-branch 'commandline -j "git branch -m $(git rev-parse --abbrev-ref HEAD)"'
+balias my:checkout-branch 'commandline -j "git co -b $(git rev-parse --abbrev-ref HEAD)"'
