@@ -14,6 +14,8 @@
 	branch = auto
 	interactive = auto
 	grep = auto
+[fetch]
+        prune = true
 [push]
 	default = simple
 [pull]
