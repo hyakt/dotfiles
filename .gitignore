@@ -38,6 +38,7 @@ Temporary Items
 .config/gatsby/
 .config/gcloud/
 .config/gh/
+.config/github-copilot/
 .config/htop/
 .config/hub/
 .config/karabiner/
@@ -45,6 +46,7 @@ Temporary Items
 .config/tabtab/
 .config/tmux/plugins/
 .config/yarn/
+.dir-locals.el
 .idea
 .log/
 .meghanada
@@ -55,4 +57,3 @@ GRTAGS
 GTAGS
 tsfmt.json
 
-.dir-locals.el
