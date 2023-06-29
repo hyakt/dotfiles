@@ -37,5 +37,4 @@ cask "font-source-han-code-jp"
 cask "raycast"
 cask "rectangle"
 cask "spotify"
-mas "Fantastical", id: 975937182
 mas "Xcode", id: 497799835
