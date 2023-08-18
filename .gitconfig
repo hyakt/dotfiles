@@ -22,6 +22,8 @@
 	rebase = false
 [rebase]
 	autostash = true
+[merge]
+	conflictStyle = zdiff3
 [core]
 	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
 	autocrlf = input             # CRLFを自動変換
