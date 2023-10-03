@@ -46,6 +46,7 @@ Temporary Items
 .config/tabtab/
 .config/tmux/plugins/
 .config/yarn/
+.config/firebase/
 .dir-locals.el
 .idea
 .log/
@@ -56,4 +57,5 @@ GPATH
 GRTAGS
 GTAGS
 tsfmt.json
+
 
