@@ -912,31 +912,28 @@ key_bindings:
   # Print all received window events.
   #print_events: false
 
-# Colors (Oceanic Next)
 colors:
-  # Default colors
   primary:
-    background: '0x1b2b34'
-    foreground: '0xd8dee9'
+    background: '0x04111c'
+    foreground: '0xfff1f3'
 
-  # Normal colors
   normal:
-    black:   '0x29414f'
-    red:     '0xec5f67'
-    green:   '0x99c794'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0x65737e'
+    black:   '0x1a1a1a'
+    red:     '0xf4005f'
+    green:   '0x98e024'
+    yellow:  '0xfa8419'
+    blue:    '0x9d65ff'
+    magenta: '0xf4005f'
+    cyan:    '0x58d1eb'
+    white:   '0xc4c5b5'
 
-  # Bright colors
   bright:
-    black:   '0x405860'
-    red:     '0xec5f67'
-    green:   '0x99c794'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xadb5c0'
+    black:   '0x625e4c'
+    red:     '0xf4005f'
+    green:   '0x98e024'
+    yellow:  '0xe0d561'
+    blue:    '0x9d65ff'
+    magenta: '0xf4005f'
+    cyan:    '0x58d1eb'
+    white:   '0xf6f6ef'
+
