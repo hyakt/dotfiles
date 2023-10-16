@@ -909,31 +909,32 @@ key_bindings:
   #   - Trace
   #log_level: Warn
 
-  # Print all received window events.
-  #print_events: false
-
+# Marine Dark Theme
+# Source: https://github.com/ProDeSquare/alacritty-colorschemes/blob/master/themes/marine_dark.yaml
 colors:
+  # Default colors
   primary:
     background: '0x04111c'
-    foreground: '0xfff1f3'
+    foreground: '0xe6f8f8'
 
+  # Normal colors
   normal:
-    black:   '0x1a1a1a'
-    red:     '0xf4005f'
-    green:   '0x98e024'
-    yellow:  '0xfa8419'
-    blue:    '0x9d65ff'
-    magenta: '0xf4005f'
-    cyan:    '0x58d1eb'
-    white:   '0xc4c5b5'
+    black:   '0x002221'
+    red:     '0xea3431'
+    green:   '0x00b6b6'
+    yellow:  '0xf8b017'
+    blue:    '0x4894fd'
+    magenta: '0xe01dca'
+    cyan:    '0x1ab2ad'
+    white:   '0x99dddb'
 
+  # Bright colors
   bright:
-    black:   '0x625e4c'
-    red:     '0xf4005f'
-    green:   '0x98e024'
-    yellow:  '0xe0d561'
-    blue:    '0x9d65ff'
-    magenta: '0xf4005f'
-    cyan:    '0x58d1eb'
-    white:   '0xf6f6ef'
-
+    black:   '0x006562'
+    red:     '0xea3431'
+    green:   '0x00b6b6'
+    yellow:  '0xf8b017'
+    blue:    '0x4894fd'
+    magenta: '0xe01dca'
+    cyan:    '0x1ab2ad'
+    white:   '0xe6f6f6'
