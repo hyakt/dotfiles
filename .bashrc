@@ -31,18 +31,6 @@ if type brew &>/dev/null; then
   fi
 fi
 
-vterm_printf() {
-    if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ]); then
-        # Tell tmux to pass the escape sequences through
-        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
-    elif [ "${TERM%%-*}" = "screen" ]; then
-        # GNU screen (screen, screen-256color, screen-256color-bce)
-        printf "\eP\e]%s\007\e\\" "$1"
-    else
-        printf "\e]%s\e\\" "$1"
-    fi
-}
-
 # golang
 PATH="$PATH:$GOENV_ROOT/bin:$GOPATH/bin"
 export GO111MODULE=on
@@ -55,6 +43,10 @@ PATH="$HOME/.deno/bin:$PATH"
 
 # Android
 PATH="$HOME/Library/Android/sdk/tools:$PATH"
+
+# SDKMAN(Java)
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
 export PATH
 
