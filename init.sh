@@ -25,9 +25,7 @@ fi
 cd $DOTFILES_REPO_PATH
 rm -rf ~/.config
 chmod +x ./symlink.sh
-if ! bash -c ./symlink.sh; then
-  exit 1;
-fi
+bash -c ./symlink.sh;
 
 echo "- install homebrew"
 if test ! $(which brew); then
