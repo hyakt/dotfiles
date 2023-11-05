@@ -29,7 +29,7 @@ bash -c ./symlink.sh;
 
 echo "- install homebrew"
 if test ! $(which brew); then
-    if ! curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash; then
+    if ! bach -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
       exit 1;
     fi
 fi
