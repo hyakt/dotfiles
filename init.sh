@@ -12,7 +12,9 @@ chsh -s /bin/bash
 
 if test ! $(which xcode-select); then
     echo "- install xcode"
-    xcode-select --install
+    if ! xcode-select --install; then
+      exit 1;
+    fi
 fi
 
 echo "- dotfile symlink"
@@ -23,11 +25,15 @@ fi
 cd $DOTFILES_REPO_PATH
 rm -rf ~/.config
 chmod +x ./symlink.sh
-bash -c ./symlink.sh
+if ! bash -c ./symlink.sh; then
+  exit 1;
+fi
 
 echo "- install homebrew"
 if test ! $(which brew); then
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+    if ! curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash; then
+      exit 1;
+    fi
 fi
 brew bundle --no-lock install
 
@@ -36,7 +42,9 @@ if [ ! -d $TPM_PATH ]; then
     mkdir -p $TPM_PATH
     git clone https://github.com/tmux-plugins/tpm $TPM_PATH
 fi
-bash -c $TPM_PATH/scripts/install_plugins.sh
+if ! bash -c $TPM_PATH/scripts/install_plugins.sh; then
+  exit 1;
+fi
 
 echo "- setup fish"
 fish -c 'cd $__fish_config_dir; curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher &&  git checkout fish_plugins && fisher update'
