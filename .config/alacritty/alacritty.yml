@@ -909,32 +909,45 @@ key_bindings:
   #   - Trace
   #log_level: Warn
 
-# Marine Dark Theme
-# Source: https://github.com/ProDeSquare/alacritty-colorschemes/blob/master/themes/marine_dark.yaml
+# Base16 Tokyo City Dark 256 - alacritty color config
+# Michaël Ball
 colors:
   # Default colors
   primary:
-    background: '0x04111c'
-    foreground: '0xe6f8f8'
+    background: '0x171d23'
+    foreground: '0xd8e2ec'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x171d23'
+    cursor: '0xd8e2ec'
 
   # Normal colors
   normal:
-    black:   '0x002221'
-    red:     '0xea3431'
-    green:   '0x00b6b6'
-    yellow:  '0xf8b017'
-    blue:    '0x4894fd'
-    magenta: '0xe01dca'
-    cyan:    '0x1ab2ad'
-    white:   '0x99dddb'
+    black:   '0x171d23'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xb7c5d3'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x89ddff'
+    white:   '0xd8e2ec'
 
   # Bright colors
   bright:
-    black:   '0x006562'
-    red:     '0xea3431'
-    green:   '0x00b6b6'
-    yellow:  '0xf8b017'
-    blue:    '0x4894fd'
-    magenta: '0xe01dca'
-    cyan:    '0x1ab2ad'
-    white:   '0xe6f6f6'
+    black:   '0x526270'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xb7c5d3'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x89ddff'
+    white:   '0xfbfbfd'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xbb9af7' }
+    - { index: 18, color: '0x1d252c' }
+    - { index: 19, color: '0x28323a' }
+    - { index: 20, color: '0xb7c5d3' }
+    - { index: 21, color: '0xf6f6f8' }
