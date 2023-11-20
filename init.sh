@@ -25,13 +25,11 @@ fi
 cd $DOTFILES_REPO_PATH
 rm -rf ~/.config
 chmod +x ./symlink.sh
-if ! bash -c ./symlink.sh; then
-  exit 1;
-fi
+./symlink.sh;
 
 echo "- install homebrew"
 if test ! $(which brew); then
-    if ! curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash; then
+    if ! bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
       exit 1;
     fi
 fi
