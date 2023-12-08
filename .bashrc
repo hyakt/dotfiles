@@ -44,11 +44,14 @@ PATH="$HOME/.deno/bin:$PATH"
 # Android
 PATH="$HOME/Library/Android/sdk/tools:$PATH"
 
-# SDKMAN(Java)
-export SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+# Rauncher desktop
+PATH="/Users/jp30149/.rd/bin:$PATH"
 
 export PATH
+
+# SDKMAN(Java)
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
 export FZF_DEFAULT_OPTS='--layout=reverse --border --exit-0'
 
