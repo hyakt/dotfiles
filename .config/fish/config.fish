@@ -18,6 +18,13 @@ fish_add_path /opt/homebrew/opt/openjdk/bin
 if test -e (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
     source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 end
+# sdkman https://github.com/sdkman/sdkman-cli/issues/671
+if test -e $HOME/.sdkman/bin/sdkman-init.sh
+    function sdk
+        bash -c "source '$HOME/.sdkman/bin/sdkman-init.sh'; sdk $argv[1..]"
+    end
+    fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
+end
 
 # Env
 #----------
@@ -39,6 +46,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg+:#ffffff,bg+:-1,hl+:#5fd7ff
  --color=info:#afaf87,prompt:#ff529d,pointer:#7eebfc
  --color=marker:#87ff00,spinner:#af5fff,header:#87afaf'
+
+# MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "$HOME/.rd/bin"
 
 # fish general settings
 #-----------
