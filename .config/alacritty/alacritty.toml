@@ -1,0 +1,396 @@
+[[colors.indexed_colors]]
+color = "0xff9e64"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xbb9af7"
+index = 17
+
+[[colors.indexed_colors]]
+color = "0x1d252c"
+index = 18
+
+[[colors.indexed_colors]]
+color = "0x28323a"
+index = 19
+
+[[colors.indexed_colors]]
+color = "0xb7c5d3"
+index = 20
+
+[[colors.indexed_colors]]
+color = "0xf6f6f8"
+index = 21
+
+[colors.bright]
+black = "0x526270"
+blue = "0x7aa2f7"
+cyan = "0x89ddff"
+green = "0x9ece6a"
+magenta = "0xbb9af7"
+red = "0xf7768e"
+white = "0xfbfbfd"
+yellow = "0xb7c5d3"
+
+[colors.cursor]
+cursor = "0xd8e2ec"
+text = "0x171d23"
+
+[colors.normal]
+black = "0x171d23"
+blue = "0x7aa2f7"
+cyan = "0x89ddff"
+green = "0x9ece6a"
+magenta = "0xbb9af7"
+red = "0xf7768e"
+white = "0xd8e2ec"
+yellow = "0xb7c5d3"
+
+[colors.primary]
+background = "0x171d23"
+foreground = "0xd8e2ec"
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "Source Han Code JP"
+style = "B"
+
+[font.normal]
+family = "Source Han Code JP"
+style = "R"
+
+[font.offset]
+y = 1
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B{"
+key = "LBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B}"
+key = "RBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Ba"
+key = "A"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "B"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bd"
+key = "D"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Be"
+key = "E"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "F"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bg"
+key = "G"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bh"
+key = "H"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bi"
+key = "I"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bj"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bk"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bl"
+key = "L"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bm"
+key = "M"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bn"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bo"
+key = "O"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bp"
+key = "P"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Br"
+key = "R"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bt"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bu"
+key = "U"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bw"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bx"
+key = "X"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001By"
+key = "Y"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bz"
+key = "Z"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BA"
+key = "A"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "B"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BC"
+key = "C"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BD"
+key = "D"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BE"
+key = "E"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "F"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BG"
+key = "G"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BH"
+key = "H"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BI"
+key = "I"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BJ"
+key = "J"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BK"
+key = "K"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BL"
+key = "L"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BM"
+key = "M"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BN"
+key = "N"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BO"
+key = "O"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BP"
+key = "P"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BQ"
+key = "Q"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BR"
+key = "R"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BS"
+key = "S"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BT"
+key = "T"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BU"
+key = "U"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BV"
+key = "V"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BW"
+key = "W"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BX"
+key = "X"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BY"
+key = "Y"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BZ"
+key = "Z"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B1"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B2"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B3"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B4"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B5"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B6"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B7"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B8"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B9"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B0"
+key = "Key0"
+mods = "Command"
+
+[scrolling]
+history = 10000
+
+[shell]
+args = ["--login", "-c", "tmux a -t default || tmux new -s default"]
+program = "/bin/bash"
+
+[window]
+decorations = "transparent"
+
+[window.dimensions]
+columns = 200
+lines = 60
+
+[window.padding]
+x = 12
+y = 10
