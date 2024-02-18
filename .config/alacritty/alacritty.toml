@@ -158,7 +158,7 @@ history = 10000
 
 [shell]
 args = ["--login", "-c", "tmux a -t default || tmux new -s default"]
-program = "/bin/bash"
+program = "/opt/homebrew/bin/bash"
 
 [window]
 decorations = "transparent"
