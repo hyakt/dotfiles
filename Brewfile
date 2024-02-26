@@ -40,4 +40,5 @@ cask "raycast"
 cask "rectangle"
 cask "spotify"
 mas "Bitwarden", id: 1352778147
+mas "MeetingBar", id: 1532419400
 mas "Xcode", id: 497799835
