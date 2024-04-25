@@ -45,6 +45,7 @@
 	cam = commit -a --amend  # 直前のcommitを修正
 	co = checkout
 	wip = !git add -A && git commit -a --no-verify -m 'wip'
+        unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
 	# branch関連
 	br = branch
 	ba = branch -a           # originも含めた全てのbranchを表示
