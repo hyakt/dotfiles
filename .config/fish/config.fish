@@ -30,7 +30,7 @@ end
 #----------
 source (brew --prefix asdf)/libexec/asdf.fish
 
-if which direnv > /dev/null 2>&1;
+if which direnv >/dev/null 2>&1
     direnv hook fish | source
     set -x DIRENV_LOG_FORMAT ""
 end
@@ -74,21 +74,21 @@ export SVN_EDITOR='vim'
 ## misc
 balias g git
 balias e emacsclient
-if which exa > /dev/null 2>&1;
+if which exa >/dev/null 2>&1
     balias ls exa
     balias l exa
 end
-if which bat > /dev/null 2>&1;
+if which bat >/dev/null 2>&1
     balias cat bat
 end
 
 ## docker
-balias d 'docker'
-balias dc 'docker-compose'
+balias d docker
+balias dc docker-compose
 
 ## node
-balias n 'npm'
-balias y 'yarn'
+balias n npm
+balias y yarn
 
 ## ruby
 balias r rails
@@ -102,5 +102,5 @@ balias gup 'gcloud compute instances start'
 balias gdown 'gcloud compute instances stop'
 
 ## util
-balias my:rename-branch 'commandline -j "git branch -m $(git rev-parse --abbrev-ref HEAD)"'
-balias my:checkout-branch 'commandline -j "git co -b $(git rev-parse --abbrev-ref HEAD)"'
+balias my-rename-branch 'commandline -j "git branch -m $(git rev-parse --abbrev-ref HEAD)"'
+balias my-checkout-branch 'commandline -j "git co -b $(git rev-parse --abbrev-ref HEAD)"'
