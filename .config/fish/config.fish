@@ -74,10 +74,6 @@ export SVN_EDITOR='vim'
 ## misc
 balias g git
 balias e emacsclient
-if which exa >/dev/null 2>&1
-    balias ls exa
-    balias l exa
-end
 if which bat >/dev/null 2>&1
     balias cat bat
 end
