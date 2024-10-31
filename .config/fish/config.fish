@@ -29,6 +29,8 @@ end
 # Env
 #----------
 source (brew --prefix asdf)/libexec/asdf.fish
+set -x ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY latest_available
+set -x ASDF_NODEJS_AUTO_ENABLE_COREPACK true
 
 if which direnv >/dev/null 2>&1
     direnv hook fish | source

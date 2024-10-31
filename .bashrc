@@ -16,6 +16,8 @@ fi
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
+export ASDF_NODEJS_AUTO_ENABLE_COREPACK=t
 
 if type direnv > /dev/null 2>&1; then
     eval "$(direnv hook bash)"
