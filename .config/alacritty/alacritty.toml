@@ -156,7 +156,7 @@ bindings = [
 [scrolling]
 history = 10000
 
-[shell]
+[terminal.shell]
 args = ["--login", "-c", "tmux a -t default || tmux new -s default"]
 program = "/opt/homebrew/bin/bash"
 
@@ -171,3 +171,5 @@ lines = 60
 [window.padding]
 x = 12
 y = 10
+
+[terminal]
