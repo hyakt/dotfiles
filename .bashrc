@@ -15,7 +15,7 @@ if [ -e /opt/homebrew/bin/brew ]; then
 fi
 
 . $(brew --prefix asdf)/libexec/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 export ASDF_NODEJS_AUTO_ENABLE_COREPACK=t
 
