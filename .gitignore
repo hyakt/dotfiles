@@ -24,6 +24,7 @@ Temporary Items
 
 # User Added
 *.iml
+.aider*
 .bin/emacs-lsp-booster
 .config/anyenv/
 .config/configstore/
