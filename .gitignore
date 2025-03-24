@@ -28,6 +28,7 @@ Temporary Items
 .bin/emacs-lsp-booster
 .config/anyenv/
 .config/configstore/
+.config/copilot-chat/
 .config/direnv/
 .config/firebase/
 .config/fish/completions/
