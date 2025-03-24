@@ -25,6 +25,7 @@ Temporary Items
 # User Added
 *.iml
 .aider*
+!.aider.conf.yml
 .bin/emacs-lsp-booster
 .config/anyenv/
 .config/configstore/
@@ -59,8 +60,8 @@ Temporary Items
 .meghanada
 .tern-port
 .zshenv
+/.config/copilot-chat/
 GPATH
 GRTAGS
 GTAGS
 tsfmt.json
-/.config/copilot-chat/
