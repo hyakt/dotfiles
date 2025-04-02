@@ -28,14 +28,6 @@ end
 
 # Env
 #----------
-source (brew --prefix asdf)/libexec/asdf.fish
-set -x ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY latest_available
-set -x ASDF_NODEJS_AUTO_ENABLE_COREPACK true
-
-if which direnv >/dev/null 2>&1
-    direnv hook fish | source
-    set -x DIRENV_LOG_FORMAT ""
-end
 if test -d (brew --prefix)"/share/fish/completions"
     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
 end

@@ -14,14 +14,10 @@ if [ -e /opt/homebrew/bin/brew ]; then
     eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-. $(brew --prefix asdf)/libexec/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf
-export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
-export ASDF_NODEJS_AUTO_ENABLE_COREPACK=t
-
-if type direnv > /dev/null 2>&1; then
-    eval "$(direnv hook bash)"
+if type mise > /dev/null 2>&1; then
+    eval "$(mise activate bash)"
 fi
+
 if type brew &>/dev/null; then
   HOMEBREW_PREFIX="$(brew --prefix)"
   if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then

@@ -23,9 +23,11 @@ Temporary Items
 .apdisk
 
 # User Added
+!.aider.conf.yml
+# Ignore all aider files
+# Keep aider configuration
 *.iml
 .aider*
-!.aider.conf.yml
 .bin/emacs-lsp-booster
 .config/anyenv/
 .config/configstore/
