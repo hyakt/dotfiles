@@ -25,6 +25,8 @@ if test -e $HOME/.sdkman/bin/sdkman-init.sh
     end
     fish_add_path (find $HOME/.sdkman/candidates/*/current/bin -maxdepth 0)
 end
+# uv
+set -gx PATH $HOME/.local/bin $PATH
 
 # Env
 #----------

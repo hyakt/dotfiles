@@ -43,7 +43,10 @@ PATH="$HOME/.deno/bin:$PATH"
 PATH="$HOME/Library/Android/sdk/tools:$PATH"
 
 # Rauncher desktop
-PATH="/Users/jp30149/.rd/bin:$PATH"
+PATH="$HOME/.rd/bin:$PATH"
+
+# uv
+PATH="$HOME/.local/bin:$PATH"
 
 export PATH
 
