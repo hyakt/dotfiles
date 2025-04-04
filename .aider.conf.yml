@@ -1,2 +1,10 @@
+model: "sonnet"
+
+auto-commits: false
+architect: true
+attribute-author: false
+attribute-committer: false
+
 chat-language: japanese
 editor: vim
+
