@@ -49,6 +49,9 @@ PATH="$HOME/Library/Android/sdk/tools:$PATH"
 # Rauncher desktop
 PATH="/Users/jp30149/.rd/bin:$PATH"
 
+# MacTex
+PATH="/Library/TeX/texbin:$PATH"
+
 export PATH
 
 # SDKMAN(Java)

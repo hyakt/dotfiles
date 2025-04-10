@@ -2,22 +2,32 @@
 #------------------
 # sbin
 fish_add_path /usr/local/sbin
+
 # my shell
 fish_add_path $HOME/.bin/
+
 # go
 fish_add_path $GOENV_ROOT/bin
 fish_add_path $GOPATH/bin
+
 # rust
 fish_add_path $HOME/.cargo/bin
+
 # deno
 fish_add_path $HOME/.deno/bin
+
 # Android
 fish_add_path $HOME/Library/Android/sdk/emulator
 fish_add_path /opt/homebrew/opt/openjdk/bin
+
+# MacTex
+fish_add_path /Library/TeX/texbin
+
 # gcloud
 if test -e (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
     source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 end
+
 # sdkman https://github.com/sdkman/sdkman-cli/issues/671
 if test -e $HOME/.sdkman/bin/sdkman-init.sh
     function sdk
