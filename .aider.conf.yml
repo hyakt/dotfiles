@@ -1,0 +1,12 @@
+model: "sonnet"
+
+auto-commits: false
+architect: true
+auto-accept-architect: false
+attribute-author: false
+attribute-committer: false
+restore-chat-history: false     # heavy
+
+chat-language: japanese
+editor: vim
+
