@@ -33,7 +33,7 @@ if test ! $(which brew); then
       exit 1;
     fi
 fi
-brew bundle --no-lock install
+brew bundle install
 
 echo "- setup tmux"
 if [ ! -d $TPM_PATH ]; then
