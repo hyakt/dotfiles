@@ -42,7 +42,6 @@ cask "jordanbaird-ice"
 cask "raycast"
 cask "rectangle"
 cask "spotify"
-mas "Bitwarden", id: 1352778147
 mas "LINE", id: 539883307
 mas "MeetingBar", id: 1532419400
 mas "Reeder", id: 1529448980
