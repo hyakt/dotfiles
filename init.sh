@@ -10,7 +10,7 @@ echo "--------------------"
 
 chsh -s /bin/bash
 
-if test ! $(which brew); then
+if test ! $(which git); then
     echo "- install xcode"
     if ! xcode-select --install; then
       exit 1;
