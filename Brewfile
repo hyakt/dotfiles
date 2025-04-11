@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "iandol/adobe-fonts"
 tap "railwaycat/emacsmacport"
 brew "coreutils"
