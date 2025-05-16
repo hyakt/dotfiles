@@ -3,6 +3,7 @@ experimental = true
 
 [tools]
 deno = "latest"
+java = "latest"
 node = "latest"
 python = "latest"
 
