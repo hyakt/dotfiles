@@ -3,3 +3,4 @@ typescript-language-server
 @vue/language-server
 vscode-langservers-extracted
 @github/copilot-language-server
+@tailwindcss/language-server
