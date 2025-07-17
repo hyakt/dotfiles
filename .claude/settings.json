@@ -2,12 +2,8 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      "List(*)",
-      "Fetch(*)",
-      "WebFetch(*)",
       "Bash(ls:*)",
       "Bash(rg:*)",
-      "Bash(make:*)",
       "Bash(cp:*)",
       "Bash(find:*)",
       "Bash(grep:*)",
@@ -24,11 +20,8 @@
       "Bash(sed:*)",
       "Bash(tar:*)",
       "Bash(gzip:*)",
-      "Bash(gunzip:*)",
       "Bash(zip:*)",
       "Bash(unzip:*)",
-      "Bash(curl:*)",
-      "Bash(wget:*)",
       "Bash(ps:*)",
       "Bash(top:*)",
       "Bash(which:*)",
@@ -72,7 +65,25 @@
       "mcp__github__get_pull_request",
       "mcp__github__get_pull_request_comments"
     ],
-    "deny": []
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(nc:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm remove:*)",
+      "Read(.env.*)",
+      "Read(id_rsa)",
+      "Read(id_ed25519)",
+      "Read(**/*token*)",
+      "Read(**/*key*)",
+      "Write(.env*)",
+      "Write(**/secrets/**)"
+    ]
   },
   "hooks": {
     "Notification": [
@@ -81,7 +92,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": ">osascript -e 'display notification \"Claude Codeが許可を求めています\" with title \"Claude Code\" subtitle \"確認待ち\" sound name \"Glass\"'"
+            "command": "osascript -e 'display notification \"Claude Codeが許可を求めています\" with title \"Claude Code\" subtitle \"確認待ち\" sound name \"Glass\"'"
           }
         ]
       }
