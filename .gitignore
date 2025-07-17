@@ -23,17 +23,21 @@ Temporary Items
 .apdisk
 
 # User Added
-!.aider.conf.yml
-# Ignore all aider files
-# Keep aider configuration
 *.iml
-.aider*
 .bin/emacs-lsp-booster
+.claude/ide/
+.claude/projects/
+.claude/settings.local.json
+.claude/shell-snapshots/
+.claude/statsig/
+.claude/todos/
 .config/anyenv/
 .config/configstore/
 .config/copilot-chat/
+.config/copilot-chat/
 .config/direnv/
 .config/firebase/
+.config/fish-ai.ini
 .config/fish/completions/
 .config/fish/conf.d/
 .config/fish/fish_history
@@ -62,9 +66,7 @@ Temporary Items
 .meghanada
 .tern-port
 .zshenv
-/.config/copilot-chat/
 GPATH
 GRTAGS
 GTAGS
 tsfmt.json
-/.config/fish-ai.ini

@@ -106,7 +106,7 @@
       "mcp__devinwiki__read_wiki_contents",
       "mcp__devinwiki__ask_question"
     ],
-    deny: []
+    "deny": []
   },
   "hooks": {
     "Notification": [
